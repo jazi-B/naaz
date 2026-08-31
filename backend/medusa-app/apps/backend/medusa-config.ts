@@ -14,7 +14,6 @@ module.exports = defineConfig({
     }
   },
   admin: {
-    disable: false,
-    backendUrl: process.env.MEDUSA_BACKEND_URL || "https://medusa-backend-production-94ae.up.railway.app"
+    disable: true
   }
 })
