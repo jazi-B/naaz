@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cd backend/medusa-app && npm install --include=dev && cd apps/backend && npm install --include=dev && npx @medusajs/cli build && cp -r .medusa ../../../medusa_built_bundle",
-    "start": "cd backend/medusa-app/apps/backend && (cp -r ../../../medusa_built_bundle/. .medusa 2>/dev/null || true) && npx @medusajs/cli db:migrate && npx @medusajs/cli start",
+    "build": "cd backend/medusa-app && npm install --include=dev && cd apps/backend && npm install --include=dev && npx @medusajs/cli build && cp -r .medusa /app/medusa_built_bundle",
+    "start": "cd backend/medusa-app/apps/backend && (cp -r /app/medusa_built_bundle .medusa 2>/dev/null || true) && npx @medusajs/cli db:migrate && npx @medusajs/cli start",
     "dev": "npm --prefix storefront run dev",
     "dev:backend": "npm --prefix backend/medusa-app run dev",
     "dev:storefront": "npm --prefix storefront run dev",
