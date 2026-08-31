@@ -12,8 +12,5 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || "supersecret_naaz_jwt_token_key_2026",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret_naaz_cookie_token_key_2026",
     }
-  },
-  admin: {
-    disable: false
   }
 })
