@@ -174,6 +174,11 @@ export const createNavigation = (
     handle: '/about-us',
     category_children: null,
   },
+  {
+    name: 'Blog',
+    handle: '/blog',
+    category_children: null,
+  },
 ]
 
 export const createFooterNavigation = (
@@ -194,18 +199,18 @@ export const createFooterNavigation = (
         ],
       },
       {
-        header: 'Orders',
+        header: 'Orders & Tracking',
         links: [
           {
-            title: 'Orders and delivery',
-            href: '/terms-and-conditions',
+            title: 'Track Your Order',
+            href: '/track-order',
           },
           {
-            title: 'Returns and refunds',
-            href: '/terms-and-conditions',
+            title: 'Orders & Delivery (COD)',
+            href: '/faq',
           },
           {
-            title: 'Payment and pricing',
+            title: '7-Day Return Policy',
             href: '/terms-and-conditions',
           },
         ],
@@ -214,36 +219,37 @@ export const createFooterNavigation = (
         header: 'About',
         links: [
           {
-            title: 'About us',
+            title: 'About NAAZ (ناز)',
             href: '/about-us',
           },
           {
-            title: 'Blog',
+            title: 'Fashion Blog',
             href: '/blog',
           },
           {
-            title: 'Careers',
-            href: '#',
+            title: 'Shop All Bags',
+            href: '/shop',
           },
         ],
       },
       {
-        header: 'Need help?',
+        header: 'Customer Support',
         links: [
           {
-            title: 'FAQs',
+            title: 'FAQs & Help',
             href: '/faq',
           },
           {
-            title: 'Support center',
-            href: '#',
+            title: 'Contact Support',
+            href: '/contact-us',
           },
           {
-            title: 'Contact us',
-            href: '#',
+            title: 'Track Parcel',
+            href: '/track-order',
           },
         ],
       },
+
     ],
     contact: {
       header: "Let's stay in touch",

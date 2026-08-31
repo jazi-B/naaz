@@ -44,7 +44,7 @@ const CollectionTile = ({
           asChild
           className="w-max self-end transition-all duration-500 ease-in-out large:opacity-0 large:group-hover:opacity-100"
         >
-          <LocalizedClientLink href={`/collections/${handle}`}>
+          <LocalizedClientLink href={`/categories/${handle}`}>
             Discover
           </LocalizedClientLink>
         </Button>
@@ -81,23 +81,12 @@ const Collections = ({
   cmsCollections: CollectionsData
   medusaCollections: StoreCollection[]
 }) => {
-  const validCollections = useMemo(() => {
-    if (!cmsCollections.data.length || !medusaCollections.length) return null
-    const collections = cmsCollections.data.filter((cmsCollection) =>
-      medusaCollections.some(
-        (medusaCollection) => medusaCollection.handle === cmsCollection.Handle
-      )
-    )
-    if (!collections || collections.length < 3) return null
-    return collections.sort((a, b) => b.id - a.id)
-  }, [cmsCollections, medusaCollections])
-
   const newestCollections = useMemo(() => {
-    if (!validCollections) return null
-    return validCollections.slice(0, 3)
-  }, [validCollections])
+    if (!cmsCollections?.data?.length) return null
+    return cmsCollections.data.slice(0, 3)
+  }, [cmsCollections])
 
-  if (!newestCollections) return null
+  if (!newestCollections || newestCollections.length === 0) return null
 
   return (
     <Container className="grid max-h-[660px] grid-rows-3 gap-2 small:max-h-[440px] small:grid-cols-2 small:grid-rows-2 large:max-h-[660px]">

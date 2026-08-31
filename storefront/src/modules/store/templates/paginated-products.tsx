@@ -43,7 +43,7 @@ export default async function PaginatedProducts({
                   handle: p.handle,
                   thumbnail: p.thumbnail,
                   calculatedPrice:
-                    cheapestVariant.cheapestPrice.calculated_price,
+                    cheapestVariant?.cheapestPrice?.calculated_price ?? '',
                   salePrice: p.sale_price,
                 }}
                 regionId={region.id}

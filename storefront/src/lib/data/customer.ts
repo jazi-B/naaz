@@ -183,7 +183,8 @@ export const addCustomerAddress = async (
     address_name:
       (formData.get('address_name') as string) ?? 'shipping_address',
     is_default_shipping:
-      formData.get('is_default_shipping') === 'on' || 'true' ? true : false,
+      formData.get('is_default_shipping') === 'on' ||
+      formData.get('is_default_shipping') === 'true',
   }
 
   const authHeaders = await getAuthHeaders()
@@ -195,7 +196,7 @@ export const addCustomerAddress = async (
       return { success: true, error: null }
     })
     .catch((err) => {
-      return { success: false, error: err.toString() }
+      return { success: false, error: 'Unable to save address. Please check your inputs.' }
     })
 }
 
@@ -211,7 +212,7 @@ export const deleteCustomerAddress = async (
       return { success: true, error: null }
     })
     .catch((err) => {
-      return { success: false, error: err.toString() }
+      return { success: false, error: 'Unable to delete address.' }
     })
 }
 
@@ -234,7 +235,8 @@ export const updateCustomerAddress = async (
     country_code: formData.get('country_code') as string,
     phone: formData.get('phone') as string,
     is_default_shipping:
-      formData.get('is_default_shipping') === 'on' || 'true' ? true : false,
+      formData.get('is_default_shipping') === 'on' ||
+      formData.get('is_default_shipping') === 'true',
   }
 
   const authHeaders = await getAuthHeaders()

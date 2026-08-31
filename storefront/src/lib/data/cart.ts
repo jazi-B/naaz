@@ -478,5 +478,11 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   revalidateTag('regions')
   revalidateTag('products')
 
-  redirect(`/${countryCode}${currentPath}`)
+  const safePath =
+    currentPath && currentPath.startsWith('/') && !currentPath.startsWith('//') && !currentPath.includes(':')
+      ? currentPath
+      : ''
+
+  redirect(`/${countryCode}${safePath}`)
 }
+

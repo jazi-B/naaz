@@ -191,6 +191,7 @@ const ShippingAddress = ({
         <Input
           label="City"
           name="shipping_address.city"
+          placeholder="e.g. Lahore, Karachi, Islamabad"
           autoComplete="address-level2"
           value={values.shipping_address.city}
           onChange={handleChange}
@@ -213,6 +214,7 @@ const ShippingAddress = ({
         <Input
           label="State / Province (optional)"
           name="shipping_address.province"
+          placeholder="e.g. Punjab, Sindh, KPK"
           autoComplete="address-level1"
           value={values.shipping_address.province}
           onChange={handleChange}
@@ -231,8 +233,9 @@ const ShippingAddress = ({
           data-testid="billing-email-input"
         />
         <Input
-          label="Phone number"
+          label="Phone number (for Delivery & COD)"
           name="shipping_address.phone"
+          placeholder="0300-1234567"
           autoComplete="tel"
           value={values.shipping_address.phone}
           onChange={handleChange}

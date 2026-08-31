@@ -2,13 +2,44 @@ const checkEnvVariables = require('./check-env-variables')
 
 checkEnvVariables()
 
+const securityHeaders = [
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'SAMEORIGIN',
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin',
+  },
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()',
+  },
+]
+
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   images: {
-    // TO DO: Fix this in the future
     unoptimized: true,
     remotePatterns: [
       {
@@ -17,29 +48,25 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'medusa-public-images.s3.eu-west-1.amazonaws.com',
+        hostname: 'www.markaz.app',
       },
       {
         protocol: 'https',
-        hostname: 'medusa-server-testing.s3.amazonaws.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'medusa-server-testing.s3.us-east-1.amazonaws.com',
+        hostname: 'static.markaz.app',
       },
       process.env.NEXT_PUBLIC_SPACE_DOMAIN && {
         protocol: 'https',
         hostname: process.env.NEXT_PUBLIC_SPACE_DOMAIN,
       },
-      process.env.NEXT_PUBLIC_CDN_SPACE_DOMAIN && {
-        protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_CDN_SPACE_DOMAIN,
-      },
-      process.env.NEXT_PUBLIC_SPACE_ENDPOINT && {
-        protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_SPACE_ENDPOINT,
-      },
     ].filter(Boolean),
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ]
   },
 }
 

@@ -66,7 +66,7 @@ export const getHeroBannerData = async (): Promise<HeroBannerData> => {
           BtnLink: "/shop",
         },
         Image: {
-          url: "https://www.markaz.app/api/export/image/1454-37-693018-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1454-37-693018-product-1.webp",
+          url: "/images/hero-banner-luxury.jpg",
           alternativeText: "NAAZ Luxury Handbags",
         },
       },
@@ -96,7 +96,7 @@ export const getMidBannerData = async (): Promise<MidBannerData> => {
           BtnLink: '/shop',
         },
         Image: {
-          url: 'https://www.markaz.app/api/export/image/1598-39-708716-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-39-708716-product-1.webp',
+          url: '/images/mid-banner-luxury.jpg',
           alternativeText: 'NAAZ Handbag Collection',
         },
       },
@@ -105,22 +105,113 @@ export const getMidBannerData = async (): Promise<MidBannerData> => {
 }
 
 export const getCollectionsData = async (): Promise<CollectionsData> => {
-  const res = await fetchStrapiClient(`/api/collections?&populate=*`, {
-    next: { tags: ['collections-main'] },
-  })
+  try {
+    const res = await fetchStrapiClient(`/api/collections?&populate=*`, {
+      next: { tags: ['collections-main'] },
+    })
+    const json = await res.json()
+    if (json?.data && Array.isArray(json.data) && json.data.length > 0) return json
+  } catch (e) {}
 
-  return res.json()
+  return {
+    data: [
+      {
+        id: 1,
+        Title: 'Luxury Shoulder Bags',
+        Handle: 'shoulder-bags',
+        Description: 'Timeless structured & quilted designs crafted for sophistication.',
+        Image: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756464-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756464-product-1.webp',
+          alternativeText: 'Luxury Shoulder Bags',
+        },
+      },
+      {
+        id: 2,
+        Title: 'Spacious Everyday Totes',
+        Handle: 'totes',
+        Description: 'Roomy elegance with premium leather finish for all your essentials.',
+        Image: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756475-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756475-product-1.webp',
+          alternativeText: 'Spacious Everyday Totes',
+        },
+      },
+      {
+        id: 3,
+        Title: 'Clutches & Crossbody',
+        Handle: 'clutches',
+        Description: 'Compact charm with gold-accented chain straps for evening wear.',
+        Image: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756469-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756469-product-1.webp',
+          alternativeText: 'Clutches & Crossbody',
+        },
+      },
+    ],
+  } as any
 }
 
 export const getExploreBlogData = async (): Promise<BlogData> => {
-  const res = await fetchStrapiClient(
-    `/api/blogs?populate[1]=FeaturedImage&sort=createdAt:desc&pagination[start]=0&pagination[limit]=3`,
-    {
-      next: { tags: ['explore-blog'] },
-    }
-  )
+  try {
+    const res = await fetchStrapiClient(
+      `/api/blogs?populate[1]=FeaturedImage&sort=createdAt:desc&pagination[start]=0&pagination[limit]=3`,
+      {
+        next: { tags: ['explore-blog'] },
+      }
+    )
+    const json = await res.json()
+    if (json?.data && Array.isArray(json.data) && json.data.length > 0) return json
+  } catch (e) {}
 
-  return res.json()
+  return {
+    data: [
+      {
+        id: 1,
+        Title: 'The Ultimate Guide to Styling Luxury Handbags in Pakistan',
+        Slug: 'guide-styling-handbags-pakistan',
+        Description: 'Discover how to pair shoulder bags, clutches and crossbody bags with both Eastern and Western outfits.',
+        Content: 'Handbags are more than just accessories — they define your personal style. In Pakistan, whether you are attending a formal wedding, heading to the university, or running everyday errands, choosing the right handbag elevates your entire aesthetic.',
+        createdAt: '2026-08-30T10:00:00.000Z',
+        FeaturedImage: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756473-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756473-product-1.webp',
+          alternativeText: 'Luxury Handbags Styling',
+        },
+        Categories: [],
+      },
+      {
+        id: 2,
+        Title: 'Tote Bag vs. Shoulder Bag: Which One is Right for You?',
+        Slug: 'tote-vs-shoulder-bag-everyday-guide',
+        Description: 'Compare everyday capacity, comfort and elegance between spacious totes and sleek shoulder bags.',
+        Content: 'Finding your ideal daily companion depends on your routine. Tote bags provide immense space for laptops and essentials, while shoulder bags offer effortless sophistication and structured charm.',
+        createdAt: '2026-08-28T10:00:00.000Z',
+        FeaturedImage: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756468-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756468-product-1.webp',
+          alternativeText: 'Tote vs Shoulder Bag',
+        },
+        Categories: [],
+      },
+      {
+        id: 3,
+        Title: '5 Essential Care Tips to Keep Your Handbags Looking Brand New',
+        Slug: 'caring-for-your-handbags-tips',
+        Description: 'Simple everyday habits and storage methods to protect premium textures, chains and hardware.',
+        Content: 'Investing in high quality bags means giving them proper care. Always store your bags with stuffing to maintain shape, avoid direct prolonged sunlight, and wipe clean with a soft microfiber cloth.',
+        createdAt: '2026-08-25T10:00:00.000Z',
+        FeaturedImage: {
+          url: 'https://www.markaz.app/api/export/image/1598-37-756462-product-1.webp?src=https%3A%2F%2Fstatic.markaz.app%2Fpakistan%2Fproducts%2F1598-37-756462-product-1.webp',
+          alternativeText: 'Handbag Care Tips',
+        },
+        Categories: [],
+      },
+    ],
+    meta: {
+      pagination: {
+        total: 3,
+        page: 1,
+        pageSize: 3,
+        pageCount: 1,
+      },
+    },
+  } as any
 }
 
 // Products
@@ -194,17 +285,79 @@ export const getFAQ = async (): Promise<FAQData> => {
       FAQSection: [
         {
           id: 1,
-          Title: 'Orders & Delivery',
+          Title: 'Nationwide Delivery & Shipping',
+          Bookmark: 'delivery-shipping',
           Question: [
             {
               id: 1,
               Question: 'What is the delivery time across Pakistan?',
-              Answer: 'Standard delivery takes 2 to 4 working days across major cities in Pakistan.',
+              Answer: 'We deliver in 2 to 3 working days in major cities (Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, Multan) and 3 to 4 working days for all other towns across Pakistan.',
             },
             {
               id: 2,
-              Question: 'Is Cash on Delivery (COD) available?',
-              Answer: 'Yes! We offer 100% Cash on Delivery across all cities and towns in Pakistan.',
+              Question: 'What are the delivery charges?',
+              Answer: 'Standard delivery is flat Rs. 200 nationwide. We offer 100% FREE Delivery on all orders above Rs. 3,999!',
+            },
+            {
+              id: 3,
+              Question: 'Which couriers do you use for delivery?',
+              Answer: 'We partner with Pakistan’s top courier services including TCS Express, Leopards Courier, and Trax Logistics with live tracking numbers provided on dispatch.',
+            },
+            {
+              id: 4,
+              Question: 'How can I track my parcel?',
+              Answer: 'Simply visit our Track Order page (/pk/track-order) and enter your Order Number (e.g. 1) or Mobile Number to view live courier status.',
+            },
+          ],
+        },
+        {
+          id: 2,
+          Title: 'Payment & Cash on Delivery (COD)',
+          Bookmark: 'payment-cod',
+          Question: [
+            {
+              id: 5,
+              Question: 'Do you offer Cash on Delivery (COD)?',
+              Answer: 'Yes! We offer 100% Cash on Delivery across Pakistan. You only pay the courier rider in cash when the parcel arrives at your doorstep.',
+            },
+            {
+              id: 6,
+              Question: 'Do I need a credit card or advance payment?',
+              Answer: 'No advance payment or credit card is required. All orders are processed directly on COD.',
+            },
+          ],
+        },
+        {
+          id: 3,
+          Title: '7-Day Returns & Exchange Policy',
+          Bookmark: 'returns-exchange',
+          Question: [
+            {
+              id: 7,
+              Question: 'What is your return/exchange policy?',
+              Answer: 'We offer a 7-day hassle-free exchange and return policy. If you receive a damaged, defective, or incorrect handbag, contact our WhatsApp support (+92 304 7437611) within 7 days for a free replacement or refund.',
+            },
+            {
+              id: 8,
+              Question: 'Do I need to make an unboxing video?',
+              Answer: 'We highly recommend recording a short 30-second unboxing video when opening your package for instant one-click claim approval.',
+            },
+          ],
+        },
+        {
+          id: 4,
+          Title: 'Product Quality & Authenticity',
+          Bookmark: 'product-quality',
+          Question: [
+            {
+              id: 9,
+              Question: 'Are the handbag photos real?',
+              Answer: 'Yes! 100% of our photos and videos are authentic product previews directly matching the exact dimensions, stitching, zippers, and colors of the handbag you receive.',
+            },
+            {
+              id: 10,
+              Question: 'How can I place an order via WhatsApp?',
+              Answer: 'Click the "Order on WhatsApp" button on any product page, or send a screenshot of the handbag to +92 304 7437611 along with your delivery address.',
             },
           ],
         },
@@ -226,13 +379,90 @@ export const getContentPage = async (
     if (json?.data?.Content || json?.data?.Title) return json
   } catch (e) {}
 
+  if (type === 'privacy-policy') {
+    return {
+      data: {
+        Title: 'Privacy Policy',
+        PageContent: `---
+headings:
+  - id: information-collection
+    title: Information We Collect
+  - id: use-of-information
+    title: How We Use Your Data
+  - id: data-protection
+    title: Data Protection & Security
+  - id: contact-us
+    title: Contact Us
+---
+
+# Privacy Policy — NAAZ Women's Bags Pakistan (ناز)
+
+At **NAAZ (ناز)**, we value your trust and are strictly committed to safeguarding the privacy of our customers across Pakistan.
+
+### Information We Collect {#information-collection}
+When you place a Cash on Delivery (COD) order on our store, we collect only the essential information needed to fulfill your shipment:
+- **Full Name** & Contact Mobile Number (03XXXXXXXXX) for courier dispatch.
+- **Complete Shipping Address & City** for accurate doorstep delivery via TCS, Leopards, or Trax.
+- **Email Address** for automated order confirmation and tracking updates.
+
+### How We Use Your Data {#use-of-information}
+Your information is exclusively utilized for:
+- Delivering your handbags safely to your doorstep.
+- Sending SMS and WhatsApp tracking notifications.
+- Providing 24/7 customer support, warranty assistance, and 7-day return processing.
+- **We NEVER sell, rent, or share your personal data with any third-party advertisers.**
+
+### Data Protection & Security {#data-protection}
+All transactions and customer records on NAAZ are secured with end-to-end industry-standard SSL encryption. Your courier details are shared solely with licensed logistics partners for nationwide fulfillment.
+
+### Contact Us {#contact-us}
+If you have any questions regarding your personal information, contact our data privacy officer at **support@naaz.pk** or via WhatsApp at **+92 304 7437611**.
+`,
+      },
+    } as any
+  }
+
   return {
     data: {
-      Title: type.replace(/-/g, ' ').toUpperCase(),
-      Content: 'Welcome to NAAZ. For customer support and inquiries, please reach out to us via support@naaz.pk.',
+      Title: 'Terms & Conditions (Return & Exchange Policy)',
+      PageContent: `---
+headings:
+  - id: general-terms
+    title: General Terms
+  - id: cash-on-delivery
+    title: Cash on Delivery & Order Verification
+  - id: 7-day-returns
+    title: 7-Day Return & Exchange Policy
+  - id: shipping-rules
+    title: Shipping & Delivery Rules
+---
+
+# Terms & Conditions & Return Policy — NAAZ (ناز)
+
+Welcome to **NAAZ — Luxury Women's Handbags & Accessories Pakistan**. By browsing or placing an order on our store, you agree to the following terms.
+
+### General Terms {#general-terms}
+All handbag descriptions, dimensions (Length × Width in Inches), colors, and prices in Pakistani Rupees (PKR) are presented with complete transparency and accuracy.
+
+### Cash on Delivery & Order Verification {#cash-on-delivery}
+- We offer 100% Cash on Delivery (COD) nationwide across all cities and rural areas of Pakistan.
+- Our customer care team may contact you via WhatsApp or SMS to confirm your delivery address before parcel dispatch.
+
+### 7-Day Return & Exchange Policy {#7-day-returns}
+We stand behind the craftsmanship of every handbag we deliver:
+1. **Defective / Damaged Items:** If your handbag arrives with any zipper defect, stitching issue, or color mismatch, notify us within **7 days** on WhatsApp (+92 304 7437611). We will arrange a **100% free courier replacement or full refund**.
+2. **Change of Mind:** If you wish to exchange your bag for another color or model, you can return it in its original unused packaging within 7 days.
+3. **Unboxing Video:** For fastest resolution, please record a short unboxing video upon receiving the parcel.
+
+### Shipping & Delivery Rules {#shipping-rules}
+- Standard Delivery Fee is Rs. 200 nationwide.
+- Orders over Rs. 3,999 qualify for **FREE Shipping**.
+- Delivery takes 2-4 working days via TCS, Leopards, or Trax.
+`,
     },
   } as any
 }
+
 
 export const getBlogPosts = async ({
   sortBy = 'createdAt:desc',
@@ -317,20 +547,26 @@ export const getBlogPostCategories = async (): Promise<BlogData> => {
 export const getBlogPostBySlug = async (
   slug: string
 ): Promise<BlogPost | null> => {
-  const res = await fetchStrapiClient(
-    `/api/blogs?filters[Slug][$eq]=${slug}&populate=*`,
-    {
-      next: { tags: [`blog-${slug}`] },
+  try {
+    const res = await fetchStrapiClient(
+      `/api/blogs?filters[Slug][$eq]=${slug}&populate=*`,
+      {
+        next: { tags: [`blog-${slug}`] },
+      }
+    )
+
+    const data = await res.json()
+
+    if (data.data && data.data.length > 0) {
+      return data.data[0]
     }
-  )
+  } catch (e) {}
 
-  const data = await res.json()
+  const exploreData = await getExploreBlogData()
+  const found = exploreData.data.find((p) => p.Slug === slug)
+  if (found) return found
 
-  if (data.data && data.data.length > 0) {
-    return data.data[0]
-  }
-
-  return null
+  return exploreData.data[0] || null
 }
 
 export const getAllBlogSlugs = async (): Promise<string[]> => {
