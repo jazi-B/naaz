@@ -29,19 +29,46 @@ export const getProductsById = async function ({
 
 export const getProductByHandle = async function (
   handle: string,
-  regionId: string
+  regionId?: string
 ) {
-  return sdk.store.product
-    .list(
+  try {
+    const res = await sdk.store.product.list(
       {
         handle,
-        region_id: regionId,
+        ...(regionId ? { region_id: regionId } : {}),
         fields:
-          '*variants.calculated_price,+variants.inventory_quantity,*variants,*variants.prices,*categories,+metadata',
+          '*variants.calculated_price,+variants.inventory_quantity,*variants,*variants.prices',
       },
       { next: { tags: ['products'] } }
     )
-    .then(({ products }) => products[0])
+    if (res?.products?.[0]) return res.products[0]
+
+    // Fallback query without region_id
+    const fallbackRes = await sdk.store.product.list(
+      {
+        handle,
+        fields:
+          '*variants.calculated_price,+variants.inventory_quantity,*variants,*variants.prices',
+      },
+      { next: { tags: ['products'] } }
+    )
+    return fallbackRes?.products?.[0] || null
+  } catch (e) {
+    console.error('getProductByHandle error:', e)
+    try {
+      const fallbackRes = await sdk.store.product.list(
+        {
+          handle,
+          fields:
+            '*variants.calculated_price,+variants.inventory_quantity,*variants,*variants.prices',
+        },
+        { next: { tags: ['products'] } }
+      )
+      return fallbackRes?.products?.[0] || null
+    } catch (err) {
+      return null
+    }
+  }
 }
 
 export const getProductsList = async function ({

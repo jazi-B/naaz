@@ -52,21 +52,19 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const { handle } = params
   const region = await getRegion(params.countryCode)
 
-  if (!region) {
-    notFound()
-  }
-
-  const product = await getProductByHandle(handle, region.id)
+  const product = await getProductByHandle(handle, region?.id)
 
   if (!product) {
-    notFound()
+    return {
+      title: 'Product | Naaz Store',
+    }
   }
 
   return {
-    title: `${product.title} | Solace Medusa Starter`,
+    title: `${product.title} | Naaz Store`,
     description: `${product.title}`,
     openGraph: {
-      title: `${product.title} | Solace Medusa Starter`,
+      title: `${product.title} | Naaz Store`,
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
@@ -77,11 +75,7 @@ export default async function ProductPage(props: Props) {
   const params = await props.params
   const region = await getRegion(params.countryCode)
 
-  if (!region) {
-    notFound()
-  }
-
-  const pricedProduct = await getProductByHandle(params.handle, region.id)
+  const pricedProduct = await getProductByHandle(params.handle, region?.id)
 
   if (!pricedProduct) {
     notFound()

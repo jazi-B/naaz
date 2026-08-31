@@ -55,7 +55,19 @@ export async function search({
   }
 
   if (category_id) {
-    searchParams.append('category_id[]', category_id)
+    if (category_id === 'pcat_shoulder_bags' || category_id === 'shoulder-bags') {
+      searchParams.append('q', 'Shoulder')
+    } else if (category_id === 'pcat_handbags' || category_id === 'handbags') {
+      searchParams.append('q', 'Hand Bag')
+    } else if (category_id === 'pcat_tote_bags' || category_id === 'tote-bags') {
+      searchParams.append('q', 'Tote')
+    } else if (category_id === 'pcat_crossbody_bags' || category_id === 'crossbody-bags') {
+      searchParams.append('q', 'Cross Body')
+    } else if (category_id === 'pcat_handbag_sets' || category_id === 'handbag-sets') {
+      searchParams.append('q', 'Set')
+    } else {
+      searchParams.append('category_id[]', category_id)
+    }
   }
 
   if (collection && Array.isArray(collection)) {
