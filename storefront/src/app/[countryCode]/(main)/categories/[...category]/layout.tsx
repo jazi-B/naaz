@@ -14,40 +14,7 @@ interface CategoryPageLayoutProps {
   params: Promise<{ category: string[] }>
 }
 
-export async function generateStaticParams() {
-  try {
-    const product_categories = await listCategories()
 
-    if (!product_categories || !product_categories.length) {
-      return []
-    }
-
-    const countryCodes = await listRegions().then((regions: StoreRegion[]) =>
-      regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat().filter(Boolean)
-    )
-
-    if (!countryCodes || !countryCodes.length) {
-      return []
-    }
-
-    const categoryHandles = product_categories.map(
-      (category: any) => category.handle
-    )
-
-    const staticParams = countryCodes
-      .map((countryCode: any) =>
-        categoryHandles.map((handle: any) => ({
-          countryCode,
-          category: [handle],
-        }))
-      )
-      .flat()
-
-    return staticParams || []
-  } catch (err) {
-    return []
-  }
-}
 
 export async function generateMetadata(
   props: CategoryPageLayoutProps

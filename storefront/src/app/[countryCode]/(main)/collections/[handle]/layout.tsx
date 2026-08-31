@@ -17,44 +17,7 @@ interface CollectionPageLayoutProps {
   params: Promise<{ handle: string; countryCode: string }>
 }
 
-export async function generateStaticParams() {
-  try {
-    const { collections } = await getCollectionsList()
 
-    if (!collections || !collections.length) {
-      return []
-    }
-
-    const countryCodes = await listRegions().then(
-      (regions: StoreRegion[]) =>
-        regions
-          ?.map((r) => r.countries?.map((c) => c.iso_2))
-          .flat()
-          .filter(Boolean) as string[]
-    )
-
-    if (!countryCodes || !countryCodes.length) {
-      return []
-    }
-
-    const collectionHandles = collections.map(
-      (collection: StoreCollection) => collection.handle
-    )
-
-    const staticParams = countryCodes
-      .map((countryCode: string) =>
-        collectionHandles.map((handle: string | undefined) => ({
-          countryCode,
-          handle,
-        }))
-      )
-      .flat()
-
-    return staticParams || []
-  } catch (err) {
-    return []
-  }
-}
 
 export async function generateMetadata(
   props: CollectionPageLayoutProps
