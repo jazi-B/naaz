@@ -6,8 +6,8 @@
     "solace-medusa-starter"
   ],
   "engines": {
-    "node": ">=24",
-    "npm": ">=10.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "scripts": {
     "dev": "next dev -p 3001",
