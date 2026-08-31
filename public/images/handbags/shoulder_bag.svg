@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <rect width="600" height="600" fill="#FAF7F2"/>
+  <defs>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880"/>
+      <stop offset="100%" stop-color="#A4835A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D068"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#3A2E2B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <circle cx="300" cy="300" r="220" fill="#EFE8DD" opacity="0.6"/>
+  <path d="M 220 300 Q 220 140 300 140 Q 380 140 380 300" fill="none" stroke="url(#bagGrad)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M 220 300 Q 220 140 300 140 Q 380 140 380 300" fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.5"/>
+  <rect x="180" y="270" width="240" height="180" rx="30" fill="url(#bagGrad)" filter="url(#shadow)"/>
+  <path d="M 180 270 Q 300 370 420 270 L 420 290 Q 300 390 180 290 Z" fill="#93724A"/>
+  <rect x="285" y="340" width="30" height="25" rx="5" fill="url(#goldGrad)"/>
+  <circle cx="300" cy="352.5" r="4" fill="#3A2E2B"/>
+  <text x="300" y="490" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', serif" font-size="20" font-weight="700" fill="#5A4738" letter-spacing="6">NAAZ</text>
+  <text x="300" y="515" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" fill="#8C7665" letter-spacing="2">WOMEN'S BAGS &amp; ACCESSORIES</text>
+</svg>

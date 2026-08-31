@@ -1,0 +1,32 @@
+{
+  "name": "naaz-bags-accessories",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd backend/medusa-app && npm install --include=dev && cd apps/backend && npm install --include=dev && npx @medusajs/cli build",
+    "start": "cd backend/medusa-app/apps/backend && npx @medusajs/cli db:migrate && npx @medusajs/cli start",
+    "dev": "npm --prefix storefront run dev",
+    "dev:backend": "npm --prefix backend/medusa-app run dev",
+    "dev:storefront": "npm --prefix storefront run dev",
+    "build:storefront": "npm --prefix storefront run build",
+    "build:backend": "npm --prefix backend/medusa-app run build",
+    "import:markaz": "node scripts/import-markaz-to-medusa.cjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4",
+    "pg": "^8.23.0",
+    "pg-embedded": "^0.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "axios": "^1.8.2",
+    "concurrently": "^9.0.1",
+    "laravel-vite-plugin": "^1.2.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.2.4"
+  }
+}

@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAAZ | Women's Bags & Accessories Pakistan</title>
+  <meta name="description" content="NAAZ — Women's Bags & Accessories. Premium shoulder bags, tote bags, clutches & mini bags with Cash on Delivery nationwide.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome & Tailwind -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FDFBF7',
+              100: '#F7F2EC',
+              200: '#EAE0D5',
+              300: '#D7C7B3',
+              400: '#C5A880',
+              500: '#A4835A',
+              600: '#8C6B44',
+              700: '#6E5232',
+              800: '#4F3821',
+              900: '#2C1F13',
+            },
+            theme: {
+              bg: '#EBF4F0',
+              darkText: '#101740',
+              tealText: '#1A4B46',
+              greenAccent: '#0E7A5D',
+              greenBtn: '#00B074',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #F8F6F0; color: #1C1917; -webkit-tap-highlight-color: transparent; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .glass-nav { background: rgba(253, 251, 247, 0.96); backdrop-filter: blur(12px); }
+    .btn-gold { background: linear-gradient(135deg, #C5A880 0%, #A4835A 100%); color: #ffffff; transition: all 0.3s ease; }
+    .btn-gold:hover { background: linear-gradient(135deg, #A4835A 0%, #8C6B44 100%); box-shadow: 0 10px 20px -5px rgba(164, 131, 90, 0.3); }
+    .custom-modal-backdrop { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(6px); }
+
+    /* Hide scrollbar */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* BRAND HARMONIZED ANIMATED MARQUEE TICKER */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* SLEEK DROPDOWN STYLING ACROSS ALL SELECT FIELDS */
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%20A4835A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.8rem center;
+      background-size: 1.1em;
+      padding-right: 2.5rem !important;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    select:focus {
+      outline: none;
+      border-color: #A4835A !important;
+      box-shadow: 0 0 0 3px rgba(164, 131, 90, 0.15) !important;
+    }
+
+    /* ADMIN NAV TAB ACTIVE STYLES */
+    .admin-tab-btn.active {
+      background-color: #2C1F13;
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(44, 31, 19, 0.15);
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- FLOATING TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none"></div>
+
+  <!-- CUSTOMER STOREFRONT HEADER (HIDDEN ON ADMIN VIEW) -->
+  <div id="customerHeaderWrapper">
+    
+    <!-- CLEAN BRAND ANNOUNCEMENT TICKER BAR -->
+    <div class="bg-brand-900 text-brand-100 text-xs py-2 overflow-hidden border-b border-brand-800 relative z-50">
+      <div class="animate-marquee font-medium text-[11px] tracking-wider uppercase">
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-sparkles text-brand-400"></i> ✨ <b>NEW ARRIVALS:</b> Luxury Pakistani Leather Bags
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-percent text-brand-400"></i> 🛍️ <b>DISCOUNTS:</b> Up To 50% OFF Handbags
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-truck-fast text-brand-400"></i> 🚚 <b>FREE SHIPPING:</b> On Orders Over Rs. 3,999
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-shield-halved text-brand-400"></i> 💎 <b>NAAZ GUARANTEE:</b> Nationwide Cash on Delivery
+        </span>
+        
+        <!-- Loop Set -->
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-sparkles text-brand-400"></i> ✨ <b>NEW ARRIVALS:</b> Luxury Pakistani Leather Bags
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-percent text-brand-400"></i> 🛍️ <b>DISCOUNTS:</b> Up To 50% OFF Handbags
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-truck-fast text-brand-400"></i> 🚚 <b>FREE SHIPPING:</b> On Orders Over Rs. 3,999
+        </span>
+        <span class="inline-flex items-center gap-2 mx-8 text-brand-200">
+          <i class="fas fa-shield-halved text-brand-400"></i> 💎 <b>NAAZ GUARANTEE:</b> Nationwide Cash on Delivery
+        </span>
+      </div>
+    </div>
+
+    <!-- Storefront Main Navbar -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-brand-200/60 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+
+          <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+            <img src="images/logo_transparent.png" alt="NAAZ Logo" class="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+            <div class="flex flex-col">
+              <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-brand-900">NAAZ</span>
+              <span class="text-[9px] tracking-[0.2em] text-brand-600 uppercase font-sans font-semibold -mt-1">Bags &amp; Accessories</span>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-brand-900">
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-brand-600 transition-colors py-2">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop')" class="hover:text-brand-600 transition-colors py-2">Shop All</a>
+            <a href="javascript:void(0)" onclick="navigateToCategory('shoulder-bags')" class="hover:text-brand-600 transition-colors py-2">Shoulder Bags</a>
+            <a href="javascript:void(0)" onclick="navigateToCategory('hand-bags')" class="hover:text-brand-600 transition-colors py-2">Hand Bags</a>
+            <a href="javascript:void(0)" onclick="navigateToCategory('purse')" class="hover:text-brand-600 transition-colors py-2">Purse</a>
+            <a href="javascript:void(0)" onclick="navigateToCategory('clutches')" class="hover:text-brand-600 transition-colors py-2">Clutches</a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <button onclick="openCartModal()" class="relative w-10 h-10 rounded-full bg-brand-900 text-brand-100 flex items-center justify-center hover:bg-brand-800 transition-colors shadow-sm">
+              <i class="fas fa-bag-shopping text-sm"></i>
+              <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-brand-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+            </button>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-brand-900 text-xl focus:outline-none p-2">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-brand-200 px-4 pt-3 pb-6 space-y-3 text-sm font-medium text-brand-900 shadow-lg">
+        <a href="javascript:void(0)" onclick="navigateTo('home'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Home</a>
+        <a href="javascript:void(0)" onclick="navigateTo('shop'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Shop All Collection</a>
+        <a href="javascript:void(0)" onclick="navigateToCategory('shoulder-bags'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Shoulder Bags</a>
+        <a href="javascript:void(0)" onclick="navigateToCategory('hand-bags'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Hand Bags</a>
+        <a href="javascript:void(0)" onclick="navigateToCategory('purse'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Purse</a>
+        <a href="javascript:void(0)" onclick="navigateToCategory('clutches'); toggleMobileMenu();" class="block py-2 border-b border-gray-100">Clutches</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- STOREFRONT HOME VIEW -->
+  <div id="storefrontView">
+    
+    <!-- Clean Minimal Hero Section -->
+    <section class="relative bg-gradient-to-r from-brand-100 via-brand-50 to-brand-100 overflow-hidden py-14 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-200/80 border border-brand-300 text-brand-900 text-xs font-bold uppercase tracking-wider">
+              NAAZ PAKISTAN
+            </div>
+            <h1 class="font-cinzel text-4xl sm:text-5xl font-extrabold text-brand-900 leading-tight">
+              Elegance in Every <span class="font-serif italic font-normal text-brand-600">Detail.</span>
+            </h1>
+            <p class="text-brand-700 text-base max-w-lg leading-relaxed">
+              Handcrafted luxury women's bags & accessories with Cash on Delivery nationwide across Pakistan.
+            </p>
+            <div class="pt-2">
+              <button onclick="navigateTo('shop')" class="btn-gold px-8 py-3.5 rounded-full font-semibold text-xs uppercase tracking-wider shadow-md flex items-center gap-3">
+                Shop Collection <i class="fas fa-arrow-right text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border-2 border-white bg-white">
+              <img src="images/handbags/hero_banner.svg" alt="NAAZ Luxury Collection" class="w-full h-auto object-cover">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS SPOTLIGHT -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div class="bg-gradient-to-r from-brand-100 via-brand-50 to-brand-100 p-6 sm:p-8 rounded-3xl border border-brand-200 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-3">
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider"><i class="fas fa-sparkles mr-1"></i> New Arrivals</span>
+            <h2 class="font-cinzel text-2xl font-bold text-brand-900">
+              Fresh Pakistani Collection
+            </h2>
+            <p class="text-xs text-brand-700 max-w-md">
+              Handcrafted shoulder bags, clutches &amp; purses. 100% verified real photos with Cash on Delivery.
+            </p>
+            <div class="pt-1">
+              <button onclick="navigateTo('shop')" class="btn-gold text-xs font-bold px-6 py-3 rounded-full uppercase tracking-wider shadow-sm">
+                Shop New Arrivals &rarr;
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4" id="newArrivalsSpotlightGrid">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES CIRCLES -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4">
+        <h2 class="text-xl font-bold text-brand-900">Shop by Category</h2>
+        <div id="categoryGrid" class="flex items-center gap-6 sm:gap-10 overflow-x-auto pb-2 no-scrollbar">
+          <!-- Dynamically populated circles -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATALOG -->
+    <section id="catalogSection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gray-200">
+        <div>
+          <h2 id="catalogTitle" class="font-cinzel text-2xl font-bold text-brand-900">All Women's Handbags</h2>
+          <span id="productCountBadge" class="text-xs font-semibold text-gray-500">Showing items</span>
+        </div>
+
+        <div class="w-full sm:w-auto">
+          <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search collection..." 
+            class="bg-white text-xs px-4 py-2.5 rounded-full border border-gray-200 focus:outline-none focus:border-brand-500 w-full sm:w-64 shadow-sm">
+        </div>
+      </div>
+
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Dynamically populated products -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PRODUCT DETAIL PAGE -->
+  <div id="productDetailView" class="hidden py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <nav class="flex items-center gap-2 text-xs text-gray-500 flex-wrap">
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-gray-900"><i class="fas fa-house"></i></a>
+      <span>&rsaquo;</span>
+      <a href="javascript:void(0)" onclick="navigateTo('shop')" class="hover:text-gray-900">Shop</a>
+      <span>&rsaquo;</span>
+      <span id="detailBreadcrumbCat" class="font-semibold text-gray-800">Category</span>
+      <span>&rsaquo;</span>
+      <span id="detailBreadcrumbTitle" class="text-gray-900 font-bold line-clamp-1">Product Title</span>
+    </nav>
+
+    <div id="productDetailContainer" class="bg-white p-6 sm:p-10 rounded-3xl border border-gray-100 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <!-- Populated via JS -->
+    </div>
+
+    <section class="space-y-6 pt-6 border-t border-gray-200">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold text-gray-900">Suggested for you</h2>
+        <button onclick="navigateTo('shop')" class="text-xs font-bold text-gray-700 hover:text-black">View All &rarr;</button>
+      </div>
+
+      <div id="suggestedProductsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Populated via JS -->
+      </div>
+    </section>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MINIMAL & EASY-TO-USE ADMIN CONTROL PORTAL -->
+  <!-- ========================================== -->
+  <div id="adminView" class="hidden min-h-screen bg-slate-50 text-slate-800 flex flex-col">
+    
+    <!-- Clean Minimal Admin Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="h-16 flex items-center justify-between border-b border-gray-100">
+          <div class="flex items-center gap-3">
+            <img src="images/logo_transparent.png" alt="NAAZ Logo" class="h-8 w-auto object-contain">
+            <span class="font-cinzel text-lg font-bold tracking-wider text-brand-900">NAAZ ADMIN</span>
+          </div>
+
+          <a href="/" target="_blank" class="bg-brand-900 hover:bg-black text-white font-bold text-xs px-4 py-2 rounded-xl flex items-center gap-2">
+            <i class="fas fa-globe"></i> View Live Storefront
+          </a>
+        </div>
+
+        <!-- CLEAN ADMIN NAVIGATION BAR -->
+        <div class="flex items-center gap-2 overflow-x-auto py-2.5 no-scrollbar text-xs font-medium">
+          <button onclick="showAdminTab('dashboard')" id="adminTabBtn-dashboard" class="admin-tab-btn active px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-chart-pie"></i> Dashboard
+          </button>
+          
+          <button onclick="showAdminTab('orders')" id="adminTabBtn-orders" class="admin-tab-btn px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-boxes-stacked"></i> Orders
+          </button>
+
+          <button onclick="showAdminTab('products')" id="adminTabBtn-products" class="admin-tab-btn px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-tags"></i> Products &amp; Prices
+          </button>
+
+          <button onclick="showAdminTab('promotions')" id="adminTabBtn-promotions" class="admin-tab-btn px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-ticket text-rose-600"></i> Promotions &amp; Discounts
+          </button>
+
+          <button onclick="showAdminTab('import')" id="adminTabBtn-import" class="admin-tab-btn px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-file-csv"></i> CSV Import
+          </button>
+
+          <button onclick="showAdminTab('add-product')" id="adminTabBtn-add-product" class="admin-tab-btn px-4 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 text-gray-700 hover:bg-gray-100">
+            <i class="fas fa-plus-circle"></i> Add Product
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-1 w-full">
+      
+      <!-- TAB 1: DASHBOARD -->
+      <div id="adminTabSection-dashboard" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="adminMetricsGrid">
+          <!-- Metrics via API -->
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <button onclick="showAdminTab('orders')" class="p-5 rounded-2xl bg-white border border-gray-200 hover:border-brand-500 transition-colors shadow-sm text-left">
+            <span class="font-bold text-gray-900 text-sm block mb-1"><i class="fas fa-boxes-stacked text-emerald-600 mr-1.5"></i> Orders Queue</span>
+            <span class="text-gray-500">Manage customer COD orders.</span>
+          </button>
+          
+          <button onclick="showAdminTab('products')" class="p-5 rounded-2xl bg-white border border-gray-200 hover:border-brand-500 transition-colors shadow-sm text-left">
+            <span class="font-bold text-gray-900 text-sm block mb-1"><i class="fas fa-pen-to-square text-amber-600 mr-1.5"></i> Edit Prices</span>
+            <span class="text-gray-500">Update handbag prices &amp; stock.</span>
+          </button>
+
+          <button onclick="showAdminTab('import')" class="p-5 rounded-2xl bg-white border border-gray-200 hover:border-brand-500 transition-colors shadow-sm text-left">
+            <span class="font-bold text-gray-900 text-sm block mb-1"><i class="fas fa-file-csv text-blue-600 mr-1.5"></i> CSV Import</span>
+            <span class="text-gray-500">Batch import Markaz stock.</span>
+          </button>
+
+          <button onclick="showAdminTab('add-product')" class="p-5 rounded-2xl bg-white border border-gray-200 hover:border-brand-500 transition-colors shadow-sm text-left">
+            <span class="font-bold text-gray-900 text-sm block mb-1"><i class="fas fa-plus-circle text-purple-600 mr-1.5"></i> Add Product</span>
+            <span class="text-gray-500">Add handbag with photo.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 2: ORDERS -->
+      <div id="adminTabSection-orders" class="hidden space-y-4">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+            <h2 class="text-xl font-bold text-gray-900">Customer COD Orders</h2>
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Live Queue</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-gray-700">
+              <thead class="bg-gray-50 font-bold uppercase text-[10px] text-gray-500 border-b border-gray-200">
+                <tr>
+                  <th class="p-4">Order ID</th>
+                  <th class="p-4">Customer Info</th>
+                  <th class="p-4">City</th>
+                  <th class="p-4">Total Price</th>
+                  <th class="p-4">Order Status</th>
+                  <th class="p-4">Tracking Info</th>
+                  <th class="p-4">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersTable" class="divide-y divide-gray-100">
+                <!-- Populated via API -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: PRODUCTS & PRICES -->
+      <div id="adminTabSection-products" class="hidden space-y-4">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden space-y-4 p-6" id="catalogManagementSection">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gray-100 pb-3">
+            <h2 class="text-xl font-bold text-gray-900">Handbag Products &amp; Prices</h2>
+
+            <button onclick="handleDeleteProductsWithoutImagesPrompt()" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl text-xs shadow-sm flex items-center gap-2">
+              <i class="fas fa-trash-can"></i> Remove Products Without Photos <span id="missingImagesBadge" class="bg-white text-red-700 px-2 py-0.5 rounded-full text-[10px] font-extrabold">0</span>
+            </button>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-gray-700">
+              <thead class="bg-gray-50 font-bold uppercase text-[10px] text-gray-500 border-b border-gray-200">
+                <tr>
+                  <th class="p-4">Image</th>
+                  <th class="p-4">Product Title</th>
+                  <th class="p-4">Status</th>
+                  <th class="p-4 bg-amber-50/60 text-amber-900 border-x border-amber-200">Selling Price (PKR)</th>
+                  <th class="p-4">Stock</th>
+                  <th class="p-4">Source Cost</th>
+                  <th class="p-4">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTable" class="divide-y divide-gray-100">
+                <!-- Populated via API -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB PROMOTIONS & DISCOUNTS -->
+      <div id="adminTabSection-promotions" class="hidden space-y-6">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 space-y-6">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <div>
+              <h2 class="text-xl font-bold text-gray-900">Promotions &amp; Promo Coupons</h2>
+              <p class="text-xs text-gray-500 mt-0.5">Create discount coupon codes (Percentage % or Flat PKR Off) for store sales.</p>
+            </div>
+            <span class="text-xs font-bold text-rose-800 bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-200">
+              <i class="fas fa-percent text-rose-600 mr-1"></i> Medusa Promotions Engine
+            </span>
+          </div>
+
+          <form onsubmit="handleCreatePromotion(event)" class="bg-rose-50/50 p-5 rounded-2xl border border-rose-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-xs">
+            <div>
+              <label class="block font-bold text-gray-800 mb-1">Coupon Code *</label>
+              <input type="text" name="code" required placeholder="e.g. NAAZ10" class="w-full bg-white p-3 rounded-xl border border-rose-300 font-bold uppercase text-gray-900">
+            </div>
+
+            <div>
+              <label class="block font-bold text-gray-800 mb-1">Discount Type *</label>
+              <select name="type" required class="w-full bg-white p-3 rounded-xl border border-rose-300 font-semibold text-gray-800">
+                <option value="percentage">Percentage OFF (%)</option>
+                <option value="fixed">Flat Amount OFF (PKR)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-gray-800 mb-1">Discount Value *</label>
+              <input type="number" name="value" required placeholder="10 or 500" class="w-full bg-white p-3 rounded-xl border border-rose-300 font-bold text-gray-900">
+            </div>
+
+            <div>
+              <label class="block font-bold text-gray-800 mb-1">Min Order Amount (PKR)</label>
+              <input type="number" name="min_order" placeholder="2000" class="w-full bg-white p-3 rounded-xl border border-rose-300 font-medium text-gray-900">
+            </div>
+
+            <div class="flex items-end">
+              <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
+                <i class="fas fa-plus-circle"></i> Create Coupon
+              </button>
+            </div>
+          </form>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-gray-700">
+              <thead class="bg-gray-50 font-bold uppercase text-[10px] text-gray-500 border-b border-gray-200">
+                <tr>
+                  <th class="p-4">Coupon Code</th>
+                  <th class="p-4">Discount</th>
+                  <th class="p-4">Min. Order Limit</th>
+                  <th class="p-4">Description</th>
+                  <th class="p-4">Status</th>
+                  <th class="p-4">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminPromotionsTable" class="divide-y divide-gray-100">
+                <!-- Populated via API -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: CSV IMPORT -->
+      <div id="adminTabSection-import" class="hidden space-y-4">
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
+          <div class="border-b border-gray-100 pb-3">
+            <h2 class="text-xl font-bold text-gray-900">Import Products from Markaz CSV</h2>
+          </div>
+
+          <div class="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-200 space-y-4">
+            <label class="block text-xs font-bold text-emerald-950">
+              Select Markaz CSV File:
+            </label>
+            
+            <div class="flex flex-col md:flex-row items-stretch md:items-center gap-4">
+              <input type="file" id="markazCsvFileInput" accept=".csv" onchange="handleFileSelected(event)"
+                class="w-full text-xs text-gray-700 bg-white border border-emerald-300 p-3 rounded-xl file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-emerald-700 file:text-white cursor-pointer shadow-sm">
+              
+              <button onclick="handleExecuteImportDirect()" id="directImportBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl text-xs uppercase tracking-wider shrink-0 shadow-md flex items-center justify-center gap-2">
+                <i class="fas fa-cloud-arrow-up text-base"></i> Import Products
+              </button>
+            </div>
+            
+            <div id="selectedFileLabel" class="text-xs text-emerald-800 font-bold flex items-center gap-2 hidden">
+              <i class="fas fa-check-circle text-emerald-600"></i> Selected: <span id="selectedFileName" class="underline font-mono">filename.csv</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: ADD PRODUCT -->
+      <div id="adminTabSection-add-product" class="hidden space-y-4">
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm space-y-6">
+          <div class="border-b border-gray-100 pb-3 flex items-center justify-between">
+            <h2 class="font-bold text-lg text-gray-900">Add New Handbag Product</h2>
+          </div>
+
+          <form id="adminAddProductForm" onsubmit="handleAdminAddProduct(event)" class="space-y-6 text-xs text-gray-700">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block font-bold text-gray-800 mb-1">Product Title *</label>
+                <input type="text" name="name" required placeholder="e.g. Celeste Leather Shoulder Bag" class="w-full bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              </div>
+
+              <div>
+                <label class="block font-bold text-gray-800 mb-1">Category *</label>
+                <select name="category_id" required class="w-full bg-gray-50 p-3 rounded-xl border border-gray-200 font-medium text-gray-900">
+                  <option value="1">Clutches</option>
+                  <option value="2">Shoulder Bags</option>
+                  <option value="3">Pouches</option>
+                  <option value="4">Hand Bags</option>
+                  <option value="5">Purse</option>
+                  <option value="6">Crossbody Bags</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-bold text-amber-700 mb-1">Selling Price (Rs.) *</label>
+                <input type="number" name="price" required placeholder="4999" class="w-full bg-amber-50/50 p-3 rounded-xl border border-amber-300 text-amber-900 font-bold text-sm">
+              </div>
+            </div>
+
+            <div class="bg-amber-50/40 p-4 rounded-2xl border border-amber-200 space-y-3">
+              <label class="block font-bold text-amber-900 text-xs">
+                Product Image (Upload File OR Select Graphic Preset)
+              </label>
+              
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                <div class="md:col-span-6">
+                  <span class="block text-[11px] text-gray-600 mb-1 font-semibold">1. Upload Image File from Device:</span>
+                  <input type="file" id="productImageFileInput" accept="image/*" onchange="handleImageFileSelect(event)"
+                    class="w-full text-xs text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-gray-900 file:text-white">
+                </div>
+
+                <div class="md:col-span-4">
+                  <span class="block text-[11px] text-gray-600 mb-1 font-semibold">2. Or Select Bag Graphic Template:</span>
+                  <select id="presetImageSelect" onchange="handlePresetSelect(event)" class="w-full bg-white p-2.5 rounded-xl border border-amber-300 text-xs font-medium text-gray-800">
+                    <option value="images/handbags/shoulder_bag.svg">Shoulder Bag Template</option>
+                    <option value="images/handbags/tote_bag.svg">Tote / Hand Bag Template</option>
+                    <option value="images/handbags/crossbody_bag.svg">Crossbody / Purse Template</option>
+                    <option value="images/handbags/crescent_bag.svg">Crescent / Clutch Template</option>
+                    <option value="images/handbags/mini_bag.svg">Pouch / Micro Bag Template</option>
+                  </select>
+                </div>
+
+                <div class="md:col-span-2 flex flex-col items-center justify-center">
+                  <span class="text-[10px] font-bold text-gray-500 uppercase mb-1">Preview</span>
+                  <div class="w-14 h-14 rounded-xl border-2 border-amber-400 bg-white overflow-hidden shadow-inner flex items-center justify-center">
+                    <img id="imagePreview" src="images/handbags/shoulder_bag.svg" alt="Preview" class="w-full h-full object-cover">
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="image" id="finalImageBase64" value="images/handbags/shoulder_bag.svg">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <input type="number" name="source_cost" placeholder="Internal Source Cost (Rs.)" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="supplier" placeholder="Supplier Name" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="supplier_city" placeholder="Supplier City" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="supplier_sku" placeholder="Supplier SKU" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="color" placeholder="Color Variant" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="material" placeholder="Material" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <input type="text" name="dimensions" placeholder="Dimensions" class="bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900">
+              <textarea name="description" placeholder="Description..." class="md:col-span-2 bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900"></textarea>
+            </div>
+
+            <div class="flex items-center justify-end">
+              <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-3.5 rounded-xl text-xs uppercase shadow-md">
+                Save Product
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="bg-white text-gray-500 border-t border-gray-200 py-4 text-center text-xs">
+      &copy; 2026 NAAZ Pakistan Control Portal
+    </footer>
+  </div>
+
+  <!-- CUSTOM MODAL CARDS -->
+  <div id="customEditModal" class="hidden fixed inset-0 custom-modal-backdrop z-50 flex items-center justify-center p-4">
+    <div class="bg-white border border-gray-200 rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-6 text-gray-800 relative">
+      <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 border border-amber-200 flex items-center justify-center font-bold">
+            <i class="fas fa-pen-to-square"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900">Edit Price &amp; Stock</h3>
+          </div>
+        </div>
+        <button onclick="closeCustomModal('customEditModal')" class="text-gray-400 hover:text-gray-600 text-lg"><i class="fas fa-xmark"></i></button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <input type="hidden" id="editModalProductId">
+        <div>
+          <label class="block font-bold text-gray-800 mb-1">Product Title</label>
+          <input type="text" id="editModalTitle" class="w-full bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900 font-medium">
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block font-bold text-amber-800 mb-1">Selling Price (PKR) *</label>
+            <input type="number" id="editModalPrice" class="w-full bg-amber-50/50 p-3 rounded-xl border border-amber-300 text-amber-900 font-extrabold text-base">
+          </div>
+          <div>
+            <label class="block font-bold text-rose-800 mb-1">Original Price (PKR)</label>
+            <input type="number" id="editModalCompareAtPrice" placeholder="Original price before sale" class="w-full bg-rose-50/40 p-3 rounded-xl border border-rose-200 text-gray-500 line-through font-bold text-base">
+          </div>
+          <div>
+            <label class="block font-bold text-gray-800 mb-1">Available Stock *</label>
+            <input type="number" id="editModalStock" class="w-full bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900 font-bold">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 border-t border-gray-100 pt-4">
+        <button onclick="closeCustomModal('customEditModal')" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-5 py-2.5 rounded-xl text-xs uppercase">
+          Cancel
+        </button>
+        <button onclick="submitCustomEditProduct()" class="bg-amber-600 hover:bg-amber-700 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-md flex items-center gap-2">
+          <i class="fas fa-check"></i> Save
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="customFulfillModal" class="hidden fixed inset-0 custom-modal-backdrop z-50 flex items-center justify-center p-4">
+    <div class="bg-white border border-gray-200 rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-6 text-gray-800 relative">
+      <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold">
+            <i class="fas fa-truck"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900">Order Dispatch &amp; Tracking</h3>
+          </div>
+        </div>
+        <button onclick="closeCustomModal('customFulfillModal')" class="text-gray-400 hover:text-gray-600 text-lg"><i class="fas fa-xmark"></i></button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <input type="hidden" id="fulfillOrderId">
+        <div>
+          <label class="block font-bold text-gray-800 mb-1">Markaz Order ID *</label>
+          <input type="text" id="fulfillMarkazId" placeholder="MKZ-ORD-88201" class="w-full bg-gray-50 p-3 rounded-xl border border-gray-200 text-gray-900 font-mono font-bold">
+        </div>
+
+        <div>
+          <label class="block font-bold text-gray-800 mb-1">Courier Tracking Number (TCS) *</label>
+          <input type="text" id="fulfillTrackingNo" placeholder="TCS-772910" class="w-full bg-emerald-50/50 p-3 rounded-xl border border-emerald-300 text-emerald-800 font-mono font-bold">
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 border-t border-gray-100 pt-4">
+        <button onclick="closeCustomModal('customFulfillModal')" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-5 py-2.5 rounded-xl text-xs uppercase">
+          Cancel
+        </button>
+        <button onclick="submitCustomFulfillOrder()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-md flex items-center gap-2">
+          <i class="fas fa-paper-plane"></i> Confirm Dispatch
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="customConfirmModal" class="hidden fixed inset-0 custom-modal-backdrop z-50 flex items-center justify-center p-4">
+    <div class="bg-white border border-gray-200 rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-6 text-gray-800 relative">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-red-100 text-red-600 border border-red-200 flex items-center justify-center text-xl shrink-0">
+          <i class="fas fa-triangle-exclamation"></i>
+        </div>
+        <div>
+          <h3 id="confirmModalTitle" class="text-base font-bold text-gray-900">Confirm Action</h3>
+          <p id="confirmModalText" class="text-xs text-gray-600 mt-0.5">Are you sure you want to proceed?</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 border-t border-gray-100 pt-4">
+        <button onclick="closeCustomModal('customConfirmModal')" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-5 py-2.5 rounded-xl text-xs uppercase">
+          Cancel
+        </button>
+        <button id="confirmModalExecuteBtn" class="bg-red-600 hover:bg-red-700 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-md">
+          Proceed
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Bag & Checkout Modals -->
+  <div id="cartModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-8 relative shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-brand-100 pb-4">
+        <h3 class="font-cinzel text-xl font-bold text-brand-900">Your Shopping Bag</h3>
+        <button onclick="closeCartModal()" class="text-gray-400 hover:text-gray-600 text-xl"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div id="cartItemsList" class="divide-y divide-brand-100"></div>
+      <div id="cartSummary" class="border-t border-brand-200 pt-4 space-y-3 text-xs"></div>
+    </div>
+  </div>
+
+  <div id="checkoutModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-brand-100 pb-4">
+        <h3 class="font-cinzel text-xl font-bold text-brand-900">Cash on Delivery Checkout</h3>
+        <button onclick="closeCheckoutModal()" class="text-gray-400 hover:text-gray-600 text-xl"><i class="fas fa-xmark"></i></button>
+      </div>
+      <form onsubmit="handlePlaceOrder(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-brand-900 mb-1">Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Ayesha Khan" class="w-full bg-brand-50 p-3 rounded-xl border border-brand-200">
+        </div>
+        <div>
+          <label class="block font-bold text-brand-900 mb-1">Mobile Phone Number (Pakistan) *</label>
+          <input type="text" name="phone" required placeholder="03001234567" class="w-full bg-brand-50 p-3 rounded-xl border border-brand-200">
+        </div>
+        <div>
+          <label class="block font-bold text-brand-900 mb-1">City *</label>
+          <select name="city" required class="w-full bg-brand-50 p-3 rounded-xl border border-brand-200 text-brand-900 font-medium">
+            <option value="Karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+            <option value="Faisalabad">Faisalabad</option>
+            <option value="Multan">Multan</option>
+            <option value="Peshawar">Peshawar</option>
+            <option value="Quetta">Quetta</option>
+            <option value="Sialkot">Sialkot</option>
+            <option value="Gujranwala">Gujranwala</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-bold text-brand-900 mb-1">Province *</label>
+          <select name="state" required class="w-full bg-brand-50 p-3 rounded-xl border border-brand-200 text-brand-900 font-medium">
+            <option value="Punjab">Punjab</option>
+            <option value="Sindh">Sindh</option>
+            <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+            <option value="Balochistan">Balochistan</option>
+            <option value="Islamabad Capital Territory">Islamabad (ICT)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-bold text-brand-900 mb-1">Complete Address *</label>
+          <textarea name="address" required rows="2" placeholder="House #, Street, Area..." class="w-full bg-brand-50 p-3 rounded-xl border border-brand-200"></textarea>
+        </div>
+        <button type="submit" class="w-full btn-gold py-4 rounded-full font-bold uppercase tracking-wider text-xs shadow-lg">
+          Confirm &amp; Place COD Order
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic JS -->
+  <script>
+    let products = [];
+    let allProductsMaster = [];
+    let categories = [];
+    let cart = JSON.parse(localStorage.getItem('naaz_cart') || '[]');
+    let currentSelectedCategory = null;
+    let detailSelectedQty = 1;
+    let currentRawCsvText = "";
+    let currentCsvFileName = "";
+    let pendingConfirmAction = null;
+
+    function showAdminTab(tabName) {
+      const tabs = ['dashboard', 'orders', 'products', 'promotions', 'import', 'add-product'];
+      tabs.forEach(t => {
+        const sec = document.getElementById(`adminTabSection-${t}`);
+        const btn = document.getElementById(`adminTabBtn-${t}`);
+        if (sec) sec.classList.add('hidden');
+        if (btn) btn.classList.remove('active');
+      });
+
+      const activeSec = document.getElementById(`adminTabSection-${tabName}`);
+      const activeBtn = document.getElementById(`adminTabBtn-${tabName}`);
+      if (activeSec) activeSec.classList.remove('hidden');
+      if (activeBtn) activeBtn.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      
+      let bgClass = 'bg-white border-gray-200 text-gray-800 shadow-xl';
+      let icon = '<i class="fas fa-circle-check text-emerald-600 text-base"></i>';
+
+      if (type === 'error') {
+        bgClass = 'bg-red-50 border-red-200 text-red-800 shadow-xl';
+        icon = '<i class="fas fa-circle-xmark text-red-600 text-base"></i>';
+      } else if (type === 'warning') {
+        bgClass = 'bg-amber-50 border-amber-200 text-amber-900 shadow-xl';
+        icon = '<i class="fas fa-triangle-exclamation text-amber-600 text-base"></i>';
+      }
+
+      toast.className = `${bgClass} border p-4 rounded-2xl flex items-center justify-between gap-3 text-xs font-semibold pointer-events-auto transform translate-y-2 transition-all duration-300 opacity-0`;
+      toast.innerHTML = `
+        <div class="flex items-center gap-3">
+          ${icon}
+          <span>${message}</span>
+        </div>
+        <button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-gray-600 text-sm"><i class="fas fa-xmark"></i></button>
+      `;
+
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      }, 10);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    function openCustomModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeCustomModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function showConfirmModal(title, text, actionCallback) {
+      document.getElementById('confirmModalTitle').innerText = title;
+      document.getElementById('confirmModalText').innerText = text;
+      pendingConfirmAction = actionCallback;
+      
+      const btn = document.getElementById('confirmModalExecuteBtn');
+      btn.onclick = async () => {
+        closeCustomModal('customConfirmModal');
+        if (pendingConfirmAction) await pendingConfirmAction();
+      };
+
+      openCustomModal('customConfirmModal');
+    }
+
+    function cleanPublicText(rawText) {
+      if (!rawText) return "Handcrafted luxury women's handbag with premium finish.";
+      let text = rawText.replace(/<[^>]*>?/gm, ' ');
+      text = text.replace(/https?:\/\/[^\s]+/g, '');
+      text = text.replace(/View this product on Markaz/gi, '');
+      text = text.replace(/Product Code:[^\s]+/gi, '');
+      text = text.replace(/MZ\d+[A-Z0-9]+/gi, '');
+      text = text.replace(/\s+/g, ' ').trim();
+      return text || "Handcrafted luxury women's handbag with premium finish.";
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await fetchCategories();
+      await fetchProducts();
+
+      handleHashRouting();
+      updateCartBadge();
+    });
+
+    window.addEventListener('hashchange', () => {
+      handleHashRouting();
+    });
+
+    function handleHashRouting() {
+      const hash = window.location.hash;
+      if (hash === '#admin') {
+        showView('admin');
+      } else if (hash.startsWith('#product-')) {
+        const prodId = hash.replace('#product-', '');
+        openProductDetailPage(prodId);
+      } else {
+        showView('home');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function navigateTo(target) {
+      if (target === 'shop') {
+        showView('home');
+        currentSelectedCategory = null;
+        document.getElementById('catalogTitle').innerText = 'All Women\'s Handbags';
+        fetchProducts();
+        const catalogEl = document.getElementById('catalogSection');
+        if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+      } else if (target === 'home') {
+        window.location.hash = '';
+        showView('home');
+      }
+    }
+
+    function navigateToCategory(slug) {
+      showView('home');
+      filterCategory(slug);
+      const catalogEl = document.getElementById('catalogSection');
+      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleFileSelected(e) {
+      const file = e.target.files[0];
+      if (file) {
+        currentCsvFileName = file.name;
+        document.getElementById('selectedFileName').innerText = file.name;
+        document.getElementById('selectedFileLabel').classList.remove('hidden');
+
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          currentRawCsvText = evt.target.result;
+        };
+        reader.readAsText(file);
+      }
+    }
+
+    async function handleExecuteImportDirect() {
+      const fileInput = document.getElementById('markazCsvFileInput');
+      if (fileInput && fileInput.files && fileInput.files[0]) {
+        const file = fileInput.files[0];
+        currentCsvFileName = file.name;
+        const reader = new FileReader();
+        reader.onload = async function(evt) {
+          currentRawCsvText = evt.target.result;
+          await handleExecuteImport();
+        };
+        reader.readAsText(file);
+      } else if (currentRawCsvText) {
+        await handleExecuteImport();
+      } else {
+        showToast('Please choose a Markaz CSV file first!', 'warning');
+      }
+    }
+
+    async function handleExecuteImport() {
+      if (!currentRawCsvText) return;
+
+      const btn = document.getElementById('directImportBtn');
+      btn.innerText = 'Processing Import...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/admin/markaz/import-csv', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ csvText: currentRawCsvText, filename: currentCsvFileName || 'markaz_stock.csv' })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          const rec = data.record;
+          await fetchProducts();
+          loadAdminData();
+          showToast(`Import finished! ${rec.created_count} products created & published live!`, 'success');
+        }
+      } catch (err) { showToast('Error completing import', 'error'); }
+      btn.innerText = 'Import Products';
+      btn.disabled = false;
+    }
+
+    function handleDeleteProductsWithoutImagesPrompt() {
+      showConfirmModal(
+        'Delete Missing Photo Products?',
+        'Are you sure you want to delete all products that do NOT have real Markaz photo links?',
+        async () => {
+          try {
+            const res = await fetch('/api/admin/products/without-images', { method: 'DELETE' });
+            const data = await res.json();
+            if (data.success) {
+              showToast(`Removed ${data.removedCount} products without real photo links!`, 'success');
+              await fetchProducts();
+              loadAdminData();
+            }
+          } catch (err) { showToast('Error removing products', 'error'); }
+        }
+      );
+    }
+
+    function openEditProductModal(id, currentTitle, currentPrice, currentStock, currentCompareAt) {
+      document.getElementById('editModalProductId').value = id;
+      document.getElementById('editModalTitle').value = currentTitle;
+      document.getElementById('editModalPrice').value = currentPrice;
+      document.getElementById('editModalCompareAtPrice').value = currentCompareAt || '';
+      document.getElementById('editModalStock').value = currentStock || 20;
+
+      openCustomModal('customEditModal');
+    }
+
+    async function submitCustomEditProduct() {
+      const id = document.getElementById('editModalProductId').value;
+      const newTitle = document.getElementById('editModalTitle').value;
+      const newPrice = Number(document.getElementById('editModalPrice').value);
+      const compareAtVal = document.getElementById('editModalCompareAtPrice').value;
+      const newCompareAt = compareAtVal !== '' ? Number(compareAtVal) : null;
+      const newStock = Number(document.getElementById('editModalStock').value);
+
+      if (!newTitle.trim() || isNaN(newPrice) || newPrice <= 0) {
+        showToast('Please enter valid product title and price!', 'warning');
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/products/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: newTitle, price: newPrice, compare_at_price: newCompareAt, stock: newStock })
+        });
+        if (res.ok) {
+          closeCustomModal('customEditModal');
+          showToast(`Updated details! Price: PKR ${newPrice.toLocaleString()}${newCompareAt ? ' (Sale Active!)' : ''}`, 'success');
+          await fetchProducts();
+          loadAdminData();
+        }
+      } catch (err) { showToast('Error updating product', 'error'); }
+    }
+
+    async function handleUpdateOrderStatus(id, newStatus) {
+      try {
+        const res = await fetch(`/api/admin/orders/${id}/status`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (res.ok) {
+          showToast(`Order status updated to "${newStatus.toUpperCase()}"!`, 'success');
+          loadAdminData();
+        }
+      } catch (err) { showToast('Error updating order status', 'error'); }
+    }
+
+    function openFulfillOrderModal(id) {
+      document.getElementById('fulfillOrderId').value = id;
+      document.getElementById('fulfillMarkazId').value = `MKZ-ORD-${Math.floor(10000 + Math.random() * 90000)}`;
+      document.getElementById('fulfillTrackingNo').value = `TCS-${Math.floor(100000 + Math.random() * 900000)}`;
+      openCustomModal('customFulfillModal');
+    }
+
+    async function submitCustomFulfillOrder() {
+      const id = document.getElementById('fulfillOrderId').value;
+      const markazId = document.getElementById('fulfillMarkazId').value;
+      const trackingNo = document.getElementById('fulfillTrackingNo').value;
+
+      try {
+        const res = await fetch(`/api/admin/orders/${id}/fulfill`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ markaz_order_id: markazId, tracking_number: trackingNo, carrier: 'TCS Express PK' })
+        });
+        if (res.ok) {
+          closeCustomModal('customFulfillModal');
+          showToast('Order fulfilled and tracking number recorded!', 'success');
+          loadAdminData();
+        }
+      } catch (err) { showToast('Fulfillment error', 'error'); }
+    }
+
+    function handleImageFileSelect(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const base64Data = event.target.result;
+          document.getElementById('imagePreview').src = base64Data;
+          document.getElementById('finalImageBase64').value = base64Data;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function handlePresetSelect(e) {
+      const val = e.target.value;
+      document.getElementById('imagePreview').src = val;
+      document.getElementById('finalImageBase64').value = val;
+    }
+
+    async function fetchCategories() {
+      try {
+        const res = await fetch('/api/categories');
+        categories = await res.json();
+        renderCategories();
+      } catch (err) { console.error(err); }
+    }
+
+    async function fetchProducts(query = {}) {
+      try {
+        const params = new URLSearchParams(query);
+        const res = await fetch(`/api/products?${params.toString()}`);
+        products = await res.json();
+        if (!Object.keys(query).length) {
+          allProductsMaster = [...products];
+          renderNewArrivalsSpotlight();
+        }
+        renderProducts();
+      } catch (err) { console.error(err); }
+    }
+
+    function renderNewArrivalsSpotlight() {
+      const grid = document.getElementById('newArrivalsSpotlightGrid');
+      if (!grid) return;
+
+      const newArrivals = allProductsMaster.slice(0, 2);
+      grid.innerHTML = newArrivals.map(prod => `
+        <div onclick="openProductDetailPage(${prod.id})" class="bg-white/80 backdrop-blur-md p-3 rounded-2xl border border-brand-200 hover:border-brand-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between">
+          <div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-brand-50 mb-2 relative">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-brand-900 text-brand-100 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">NEW</span>
+            </div>
+            <h4 class="font-cinzel text-xs font-bold text-brand-900 line-clamp-1 group-hover:text-brand-600">${prod.name}</h4>
+          </div>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="text-xs font-extrabold text-brand-900">PKR ${prod.price.toLocaleString()}</span>
+            <span class="text-[10px] font-bold text-brand-900 bg-brand-200/80 px-2 py-0.5 rounded-full group-hover:bg-brand-900 group-hover:text-white transition-colors">View</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categoryGrid');
+      const activeCats = categories.filter(cat => {
+        return allProductsMaster.some(p => p.category_slug === cat.slug);
+      });
+
+      const displayCats = activeCats.length ? activeCats : categories;
+
+      container.innerHTML = displayCats.map(cat => `
+        <button onclick="navigateToCategory('${cat.slug}')" class="group flex flex-col items-center shrink-0">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-100 border border-gray-200/80 flex items-center justify-center p-4 shadow-sm group-hover:scale-105 group-hover:border-emerald-400 transition-all">
+            <img src="${cat.image}" alt="${cat.name}" class="w-full h-full object-contain">
+          </div>
+          <span class="text-xs font-semibold text-theme-darkText mt-2 group-hover:text-theme-greenAccent">${cat.name}</span>
+        </button>
+      `).join('');
+    }
+
+    function renderProducts() {
+      const container = document.getElementById('productsGrid');
+      document.getElementById('productCountBadge').innerText = `Showing ${products.length} item${products.length === 1 ? '' : 's'}`;
+
+      if (!products.length) {
+        container.innerHTML = `<div class="col-span-full text-center py-16 text-xs text-brand-600 bg-white rounded-3xl p-8 border border-gray-100">Catalog is currently empty. Upload your Markaz CSV from the Admin Panel.</div>`;
+        return;
+      }
+
+      container.innerHTML = products.map(prod => {
+        const cleanDesc = cleanPublicText(prod.description);
+        return `
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-square overflow-hidden bg-brand-50 cursor-pointer" onclick="openProductDetailPage(${prod.id})">
+                <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                ${prod.compare_at_price ? `<span class="absolute top-3 right-3 bg-brand-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Save ${Math.round(((prod.compare_at_price - prod.price)/prod.compare_at_price)*100)}%</span>` : ''}
+              </div>
+              <div class="p-5 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-semibold text-brand-500 uppercase tracking-widest">${prod.category_name || 'Handbag'}</span>
+                  <span class="text-[10px] text-amber-500 font-bold"><i class="fas fa-star text-[9px]"></i> 4.8</span>
+                </div>
+                <h3 onclick="openProductDetailPage(${prod.id})" class="font-cinzel text-base font-bold text-brand-900 line-clamp-1 cursor-pointer hover:text-brand-600">${prod.name}</h3>
+                <p class="text-xs text-gray-500 line-clamp-1">${cleanDesc}</p>
+              </div>
+            </div>
+
+            <div class="p-5 pt-0 mt-2 border-t border-brand-100/60 pt-4 flex items-center justify-between">
+              <div>
+                <span class="font-bold text-base text-brand-900">Rs. ${prod.price.toLocaleString()}</span>
+                ${prod.compare_at_price ? `<span class="text-xs text-gray-400 line-through ml-1.5">Rs. ${prod.compare_at_price.toLocaleString()}</span>` : ''}
+              </div>
+              <button onclick="openProductDetailPage(${prod.id})" class="btn-gold px-4 py-2 rounded-full text-xs font-semibold tracking-wider shadow-sm">
+                View Details
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openProductDetailPage(id) {
+      const prod = allProductsMaster.find(p => p.id == id) || products.find(p => p.id == id);
+      if (!prod) return;
+
+      detailSelectedQty = 1;
+      window.location.hash = `#product-${prod.id}`;
+
+      document.getElementById('detailBreadcrumbCat').innerText = prod.category_name || 'Handbags';
+      document.getElementById('detailBreadcrumbTitle').innerText = prod.name;
+
+      const cleanDesc = cleanPublicText(prod.description);
+
+      const container = document.getElementById('productDetailContainer');
+      container.innerHTML = `
+        <div class="lg:col-span-6 flex gap-4">
+          <div class="flex flex-col gap-3 shrink-0">
+            <div class="w-16 h-16 rounded-xl border-2 border-emerald-500 overflow-hidden p-1 bg-white shadow-sm cursor-pointer">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
+          <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-brand-50 border border-gray-200 shadow-sm flex items-center justify-center">
+            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-3 py-1 rounded-full border border-gray-200"><i class="fas fa-expand mr-1"></i> View</span>
+            <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-bold px-2.5 py-1 rounded-full">1/1</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6">
+          <div class="flex items-center justify-between text-xs">
+            <span class="bg-emerald-50 text-emerald-800 font-bold px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
+              <i class="fas fa-circle-check text-emerald-600"></i> NAAZ Verified Guarantee
+            </span>
+            <button class="text-gray-500 hover:text-red-500 font-medium flex items-center gap-1">
+              <i class="far fa-heart"></i> Save
+            </button>
+          </div>
+
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-theme-darkText leading-tight">${prod.name}</h1>
+            <div class="flex items-center gap-4 mt-2 text-xs">
+              <span class="text-emerald-700 font-bold"><i class="fas fa-heart text-emerald-500"></i> Loved by buyers</span>
+              <span class="bg-gray-100 text-gray-700 font-bold px-3 py-1 rounded-full"><i class="fas fa-box text-gray-500 mr-1"></i> ${prod.stock || 100} in stock</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-3xl font-extrabold text-theme-darkText">PKR ${prod.price.toLocaleString()}</div>
+            ${prod.compare_at_price ? `<span class="text-xs text-gray-400 line-through">PKR ${prod.compare_at_price.toLocaleString()}</span>` : ''}
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 text-xs space-y-3">
+            <h3 class="font-bold text-gray-900 uppercase text-[11px] tracking-wider border-b border-gray-200 pb-2">
+              <i class="fas fa-circle-info text-emerald-600 mr-1"></i> Specifications
+            </h3>
+            <p class="text-gray-700 leading-relaxed font-medium">${cleanDesc}</p>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-gray-200/80 text-[11px]">
+              <div><span class="font-bold text-gray-500">Color:</span> <span class="font-semibold text-gray-900">${prod.color || 'Default'}</span></div>
+              <div><span class="font-bold text-gray-500">Material:</span> <span class="font-semibold text-gray-900">${prod.material || 'Leather'}</span></div>
+              <div><span class="font-bold text-gray-500">Dimensions:</span> <span class="font-semibold text-gray-900">${prod.dimensions || 'Standard'}</span></div>
+              <div><span class="font-bold text-gray-500">Delivery:</span> <span class="font-semibold text-emerald-700">COD Available</span></div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <span class="font-bold text-gray-700">Quantity</span>
+            <div class="inline-flex items-center border border-gray-200 rounded-full bg-gray-50 p-1">
+              <button onclick="adjustDetailQty(-1)" class="w-8 h-8 rounded-full bg-white flex items-center justify-center font-bold text-gray-700 shadow-sm hover:bg-gray-100">-</button>
+              <span id="detailQtyVal" class="px-4 font-bold text-sm text-gray-900">1</span>
+              <button onclick="adjustDetailQty(1)" class="w-8 h-8 rounded-full bg-white flex items-center justify-center font-bold text-gray-700 shadow-sm hover:bg-gray-100">+</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <button onclick="addToCartDetailed(${prod.id})" class="border-2 border-brand-900 text-brand-900 hover:bg-brand-50 py-4 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm">
+              <i class="fas fa-bag-shopping"></i> Add to bag
+            </button>
+            <button onclick="buyNowDetailed(${prod.id})" class="bg-theme-greenBtn hover:bg-emerald-600 text-white py-4 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg">
+              <i class="fas fa-bolt"></i> Buy now
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between text-[11px] font-semibold text-gray-600 pt-4 border-t border-gray-100">
+            <span class="flex items-center gap-1.5"><i class="fas fa-money-bill-wave text-emerald-600"></i> Cash on delivery</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-rotate-left text-emerald-600"></i> Easy returns</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-shield-halved text-emerald-600"></i> Secure checkout</span>
+          </div>
+        </div>
+      `;
+
+      renderSuggestedProducts(prod);
+      showView('productDetailView');
+    }
+
+    function adjustDetailQty(delta) {
+      detailSelectedQty = Math.max(1, detailSelectedQty + delta);
+      const el = document.getElementById('detailQtyVal');
+      if (el) el.innerText = detailSelectedQty;
+    }
+
+    function addToCartDetailed(id) {
+      const prod = allProductsMaster.find(p => p.id == id);
+      if (!prod) return;
+      const existing = cart.find(item => item.product_id == id);
+      if (existing) {
+        existing.quantity += detailSelectedQty;
+      } else {
+        cart.push({ product_id: prod.id, name: prod.name, price: prod.price, image: prod.image, quantity: detailSelectedQty });
+      }
+      localStorage.setItem('naaz_cart', JSON.stringify(cart));
+      updateCartBadge();
+      openCartModal();
+    }
+
+    function buyNowDetailed(id) {
+      addToCartDetailed(id);
+      openCheckoutModal();
+    }
+
+    function renderSuggestedProducts(currentProd) {
+      const grid = document.getElementById('suggestedProductsGrid');
+      const suggested = allProductsMaster.filter(p => p.id != currentProd.id);
+
+      if (!suggested.length) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white p-6 rounded-2xl text-center text-xs text-gray-500 border border-gray-100">
+            More items will appear here as you add products.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = suggested.map(prod => `
+        <div onclick="openProductDetailPage(${prod.id})" class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between">
+          <div>
+            <div class="aspect-square bg-brand-50 overflow-hidden">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-4">
+              <span class="text-[10px] font-bold text-brand-500 uppercase">${prod.category_name || 'Handbag'}</span>
+              <h4 class="font-cinzel text-sm font-bold text-gray-900 line-clamp-1 mt-0.5">${prod.name}</h4>
+              <div class="mt-2 font-bold text-sm text-gray-900">PKR ${prod.price.toLocaleString()}</div>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button class="w-full bg-gray-900 hover:bg-black text-white text-[11px] font-bold py-2 rounded-full uppercase">View Item</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterCategory(slug) {
+      currentSelectedCategory = slug;
+      document.getElementById('catalogTitle').innerText = slug ? slug.replace('-', ' ').toUpperCase() : 'All Women\'s Handbags';
+      fetchProducts({ category: slug });
+    }
+
+    function handleSearch() {
+      const val = document.getElementById('searchInput').value;
+      fetchProducts({ search: val, category: currentSelectedCategory || '' });
+    }
+
+    function updateCartBadge() {
+      const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+      document.getElementById('cartCountBadge').innerText = totalCount;
+    }
+
+    function openCartModal() {
+      const modal = document.getElementById('cartModal');
+      const list = document.getElementById('cartItemsList');
+      const summary = document.getElementById('cartSummary');
+
+      if (!cart.length) {
+        list.innerHTML = `<p class="text-center py-8 text-xs text-brand-600">Your bag is empty.</p>`;
+        summary.innerHTML = '';
+      } else {
+        const subtotal = cart.reduce((acc, i) => acc + i.price * i.quantity, 0);
+        const deliveryFee = subtotal >= 3999 ? 0 : 200;
+        const total = subtotal + deliveryFee;
+
+        list.innerHTML = cart.map((item, idx) => `
+          <div class="py-4 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-3">
+              <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover border border-brand-200">
+              <div>
+                <h4 class="font-bold text-brand-900">${item.name}</h4>
+                <p class="text-brand-500">Qty: ${item.quantity} x Rs. ${item.price.toLocaleString()}</p>
+              </div>
+            </div>
+            <button onclick="removeFromCart(${idx})" class="text-red-500 hover:text-red-700"><i class="fas fa-trash"></i></button>
+          </div>
+        `).join('');
+
+        let activeAppliedDiscount = window.currentAppliedDiscount || 0;
+        const finalTotal = Math.max(0, total - activeAppliedDiscount);
+
+        summary.innerHTML = `
+          <div class="flex justify-between"><span>Subtotal:</span><strong>Rs. ${subtotal.toLocaleString()}</strong></div>
+          ${activeAppliedDiscount > 0 ? `<div class="flex justify-between text-emerald-700 font-bold"><span>Promo Discount (${window.currentAppliedCode}):</span><strong>- Rs. ${activeAppliedDiscount.toLocaleString()}</strong></div>` : ''}
+          <div class="flex justify-between"><span>Delivery Charge:</span><strong>${deliveryFee === 0 ? '<span class="text-green-600 font-bold">FREE</span>' : 'Rs. ' + deliveryFee}</strong></div>
+          <div class="flex justify-between text-sm font-bold border-t border-brand-200 pt-2"><span>Total (COD):</span><span class="font-cinzel text-brand-900 text-lg">Rs. ${finalTotal.toLocaleString()}</span></div>
+          
+          <div class="pt-2 border-t border-gray-100">
+            <label class="block font-bold text-gray-700 text-[11px] mb-1"><i class="fas fa-ticket text-rose-600"></i> Have a Promo Coupon Code?</label>
+            <div class="flex gap-2">
+              <input type="text" id="promoCodeInput" value="${window.currentAppliedCode || ''}" placeholder="e.g. NAAZ10 or FLAT500" class="w-full bg-brand-50 p-2.5 rounded-xl border border-brand-200 uppercase font-bold text-xs text-brand-900">
+              <button onclick="applyPromoCoupon()" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs uppercase shrink-0 shadow-sm">Apply</button>
+            </div>
+          </div>
+
+          <button onclick="openCheckoutModal()" class="w-full btn-gold py-3.5 rounded-full font-bold uppercase tracking-wider text-xs mt-2">
+            Proceed to Checkout
+          </button>
+        `;
+      }
+      modal.classList.remove('hidden');
+    }
+
+    async function applyPromoCoupon() {
+      const code = (document.getElementById('promoCodeInput').value || '').trim();
+      if (!code) return showToast('Please enter a promo coupon code', 'warning');
+
+      const subtotal = cart.reduce((acc, i) => acc + i.price * i.quantity, 0);
+      try {
+        const res = await fetch('/api/promotions/validate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code, subtotal })
+        });
+        const data = await res.json();
+        if (data.valid) {
+          window.currentAppliedDiscount = data.discount_amount;
+          window.currentAppliedCode = data.code;
+          showToast(data.message, 'success');
+          openCartModal();
+        } else {
+          showToast(data.message, 'error');
+        }
+      } catch (err) { showToast('Error applying coupon', 'error'); }
+    }
+
+    function closeCartModal() {
+      document.getElementById('cartModal').classList.add('hidden');
+    }
+
+    function removeFromCart(idx) {
+      cart.splice(idx, 1);
+      localStorage.setItem('naaz_cart', JSON.stringify(cart));
+      updateCartBadge();
+      openCartModal();
+    }
+
+    function openCheckoutModal() {
+      closeCartModal();
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    async function handlePlaceOrder(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const payload = {
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        city: formData.get('city'),
+        state: formData.get('state'),
+        address: formData.get('address'),
+        items: cart
+      };
+
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const order = await res.json();
+        if (order.order_id) {
+          cart = [];
+          localStorage.removeItem('naaz_cart');
+          updateCartBadge();
+          closeCheckoutModal();
+          showToast(`Order Confirmed! Order ID: ${order.order_id}. Total: Rs. ${order.total_amount.toLocaleString()}`, 'success');
+        }
+      } catch (err) { showToast('Error placing order.', 'error'); }
+    }
+
+    function showView(view) {
+      document.getElementById('storefrontView').classList.add('hidden');
+      document.getElementById('productDetailView').classList.add('hidden');
+      document.getElementById('adminView').classList.add('hidden');
+
+      const customerHeader = document.getElementById('customerHeaderWrapper');
+
+      if (view === 'admin') {
+        customerHeader.classList.add('hidden');
+        document.getElementById('adminView').classList.remove('hidden');
+        loadAdminData();
+      } else if (view === 'productDetailView') {
+        customerHeader.classList.remove('hidden');
+        document.getElementById('productDetailView').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        customerHeader.classList.remove('hidden');
+        document.getElementById('storefrontView').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    async function loadAdminData() {
+      try {
+        const metricsRes = await fetch('/api/admin/metrics');
+        const metrics = await metricsRes.json();
+
+        document.getElementById('missingImagesBadge').innerText = metrics.missingImageProducts || 0;
+
+        document.getElementById('adminMetricsGrid').innerHTML = `
+          <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Total Orders</p>
+            <h3 class="text-3xl font-extrabold text-gray-900 mt-1">${metrics.totalOrders}</h3>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Total COD Revenue</p>
+            <h3 class="text-3xl font-extrabold text-amber-700 mt-1">Rs. ${metrics.totalRevenue.toLocaleString()}</h3>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Catalog Products</p>
+            <h3 class="text-3xl font-extrabold text-gray-900 mt-1">${metrics.totalProducts}</h3>
+          </div>
+          <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Pending Dispatches</p>
+            <h3 class="text-3xl font-extrabold text-emerald-700 mt-1">${metrics.pendingOrders}</h3>
+          </div>
+        `;
+
+        const prodsRes = await fetch('/api/products?includeDrafts=true');
+        const prods = await prodsRes.json();
+        document.getElementById('adminProductsTable').innerHTML = prods.map(p => `
+          <tr id="prod-row-${p.id}">
+            <td class="p-4">
+              <img src="${p.image}" alt="${p.name}" class="w-10 h-10 rounded-lg object-cover border border-gray-200">
+            </td>
+            <td class="p-4 font-bold text-gray-900">
+              ${p.name}
+              ${!p.image.startsWith('http') ? '<span class="ml-2 text-[9px] bg-red-50 text-red-700 font-bold px-2 py-0.5 rounded-full border border-red-200">No Real Photo</span>' : ''}
+            </td>
+            <td class="p-4"><span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase ${p.status === 'draft' ? 'bg-amber-50 text-amber-800 border border-amber-200' : 'bg-emerald-50 text-emerald-800 border border-emerald-200'}">${p.status}</span></td>
+            
+            <td class="p-4 bg-amber-50/50 border-x border-amber-200">
+              <div class="flex items-center justify-between gap-2">
+                <div>
+                  <span class="font-extrabold text-amber-900 text-sm">Rs. ${p.price.toLocaleString()}</span>
+                  ${p.compare_at_price ? `<br><span class="text-[10px] text-gray-400 line-through">Rs. ${p.compare_at_price.toLocaleString()}</span> <span class="text-[9px] bg-rose-100 text-rose-700 font-bold px-1.5 py-0.5 rounded">SALE</span>` : ''}
+                </div>
+                <button onclick="openEditProductModal(${p.id}, '${p.name.replace(/'/g, "\\'")}', ${p.price}, ${p.stock || 20}, ${p.compare_at_price || 0})" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-2.5 py-1 rounded-lg text-[10px] flex items-center gap-1 shadow-sm transition-all">
+                  <i class="fas fa-pencil text-[9px]"></i> Edit Price
+                </button>
+              </div>
+            </td>
+
+            <td class="p-4 font-semibold text-gray-800">${p.stock || 20}</td>
+            <td class="p-4 text-gray-500">Rs. ${(p.source_cost || 0).toLocaleString()}</td>
+            <td class="p-4 flex items-center gap-2">
+              <button onclick="openEditProductModal(${p.id}, '${p.name.replace(/'/g, "\\'")}', ${p.price}, ${p.stock || 20}, ${p.compare_at_price || 0})" class="bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-300 font-bold px-3 py-1.5 rounded-lg text-[11px] flex items-center gap-1 transition-colors">
+                <i class="fas fa-sliders text-xs"></i> Full Edit
+              </button>
+              <button onclick="handleDeleteProductPrompt(${p.id})" class="bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 font-bold px-3 py-1.5 rounded-lg text-[11px] flex items-center gap-1 transition-colors">
+                <i class="fas fa-trash-can text-xs"></i> Delete
+              </button>
+            </td>
+          </tr>
+        `).join('');
+
+        const ordersRes = await fetch('/api/orders');
+        const orders = await ordersRes.json();
+        document.getElementById('adminOrdersTable').innerHTML = orders.length ? orders.map(o => {
+          let statusBadgeClass = 'bg-amber-50 text-amber-800 border border-amber-200';
+          if (o.status === 'accepted') statusBadgeClass = 'bg-blue-50 text-blue-800 border border-blue-200';
+          else if (o.status === 'dispatched' || o.fulfillment_status === 'fulfilled') statusBadgeClass = 'bg-emerald-50 text-emerald-800 border border-emerald-200';
+          else if (o.status === 'rejected') statusBadgeClass = 'bg-red-50 text-red-800 border border-red-200';
+
+          return `
+            <tr>
+              <td class="p-4 font-bold font-mono text-gray-900">${o.order_id}</td>
+              <td class="p-4"><span class="font-bold text-gray-900">${o.name}</span><br><span class="text-gray-500">${o.phone}</span><br><span class="text-[10px] text-gray-400">${o.address}</span></td>
+              <td class="p-4 font-semibold text-gray-800">${o.city}</td>
+              <td class="p-4 font-bold text-amber-900">Rs. ${o.total_amount.toLocaleString()}</td>
+              <td class="p-4"><span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase ${statusBadgeClass}">${o.status || 'pending'}</span></td>
+              <td class="p-4 font-mono text-[11px]">
+                ${o.markaz_order_id ? `<span class="text-gray-900 font-bold">${o.markaz_order_id}</span><br><span class="text-emerald-700 font-semibold">${o.tracking_number} (${o.carrier})</span>` : '<span class="text-amber-600 font-medium">Pending Dispatch</span>'}
+              </td>
+              <td class="p-4">
+                <div class="flex items-center gap-2 flex-wrap">
+                  ${o.status !== 'accepted' && o.status !== 'dispatched' && o.status !== 'rejected' ? `
+                    <button onclick="handleUpdateOrderStatus('${o.id}', 'accepted')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm flex items-center gap-1">
+                      <i class="fas fa-check text-xs"></i> Accept
+                    </button>
+                  ` : ''}
+
+                  ${o.status !== 'rejected' && o.status !== 'dispatched' ? `
+                    <button onclick="handleUpdateOrderStatus('${o.id}', 'rejected')" class="bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm flex items-center gap-1">
+                      <i class="fas fa-xmark text-xs"></i> Reject
+                    </button>
+                  ` : ''}
+
+                  ${o.fulfillment_status !== 'fulfilled' && o.status !== 'rejected' ? `
+                    <button onclick="openFulfillOrderModal('${o.id}')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm flex items-center gap-1">
+                      <i class="fas fa-truck text-xs"></i> Fulfill &amp; Track
+                    </button>
+                  ` : ''}
+                </div>
+              </td>
+            </tr>
+          `;
+        }).join('') : `<tr><td colspan="7" class="p-6 text-center text-xs text-gray-400">No customer orders placed yet.</td></tr>`;
+
+        // PROMOTIONS & COUPONS RENDERING
+        await loadPromotionsData();
+
+      } catch (err) { console.error(err); }
+    }
+
+    async function loadPromotionsData() {
+      try {
+        const res = await fetch('/api/promotions');
+        const promos = await res.json();
+        const table = document.getElementById('adminPromotionsTable');
+        if (table) {
+          table.innerHTML = promos.length ? promos.map(p => `
+            <tr>
+              <td class="p-4 font-extrabold font-mono text-rose-800 text-sm">${p.code}</td>
+              <td class="p-4 font-bold text-gray-900">${p.type === 'percentage' ? p.value + '% OFF' : 'Rs. ' + p.value.toLocaleString() + ' OFF'}</td>
+              <td class="p-4 font-semibold text-gray-600">${p.min_order ? 'Rs. ' + p.min_order.toLocaleString() : 'No Limit'}</td>
+              <td class="p-4 text-gray-500">${p.description}</td>
+              <td class="p-4"><span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-800 border border-emerald-200">Active</span></td>
+              <td class="p-4">
+                <button onclick="handleDeletePromotion(${p.id})" class="bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 font-bold px-3 py-1.5 rounded-lg text-[11px] flex items-center gap-1">
+                  <i class="fas fa-trash-can text-xs"></i> Delete
+                </button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="6" class="p-6 text-center text-xs text-gray-400">No active promo coupons. Create one above!</td></tr>`;
+        }
+      } catch (err) { console.error(err); }
+    }
+
+    async function handleCreatePromotion(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch('/api/promotions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          showToast(`Promo Coupon ${payload.code.toUpperCase()} created successfully!`, 'success');
+          form.reset();
+          await loadPromotionsData();
+        } else {
+          showToast('Error creating promo coupon', 'error');
+        }
+      } catch (err) { showToast('Error creating promo coupon', 'error'); }
+    }
+
+    async function handleDeletePromotion(id) {
+      try {
+        const res = await fetch(`/api/promotions/${id}`, { method: 'DELETE' });
+        if (res.ok) {
+          showToast('Promo coupon deleted successfully', 'success');
+          await loadPromotionsData();
+        }
+      } catch (err) { showToast('Error deleting coupon', 'error'); }
+    }
+
+    async function handleAdminAddProduct(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      payload.image = document.getElementById('finalImageBase64').value || 'images/handbags/shoulder_bag.svg';
+
+      try {
+        await fetch('/api/products', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        showToast('Product added successfully!', 'success');
+        form.reset();
+        document.getElementById('imagePreview').src = 'images/handbags/shoulder_bag.svg';
+        document.getElementById('finalImageBase64').value = 'images/handbags/shoulder_bag.svg';
+        await fetchProducts();
+        loadAdminData();
+        showAdminTab('products');
+      } catch (err) { showToast('Error adding product', 'error'); }
+    }
+
+    function handleDeleteProductPrompt(id) {
+      showConfirmModal(
+        'Delete Product?',
+        'Are you sure you want to delete this handbag product from your catalog?',
+        async () => {
+          try {
+            const res = await fetch(`/api/products/${id}`, { method: 'DELETE' });
+            if (res.ok) {
+              showToast('Product deleted successfully!', 'success');
+              await fetchProducts();
+              loadAdminData();
+            }
+          } catch (err) { showToast('Error deleting product', 'error'); }
+        }
+      );
+    }
+  </script>
+</body>
+</html>

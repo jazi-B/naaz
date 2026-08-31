@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="100%" height="100%">
+  <rect width="1600" height="800" fill="#F5F0EB"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F2EC"/>
+      <stop offset="100%" stop-color="#EAE0D5"/>
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880"/>
+      <stop offset="100%" stop-color="#A4835A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D068"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#2C221E" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="800" fill="url(#bgGrad)"/>
+  <circle cx="1200" cy="400" r="320" fill="#E2D6C7" opacity="0.5"/>
+  <circle cx="1200" cy="400" r="220" fill="#D7C7B3" opacity="0.3"/>
+  <g transform="translate(140, 260)">
+    <text x="0" y="40" font-family="'Cinzel', 'Playfair Display', serif" font-size="24" font-weight="700" fill="#967757" letter-spacing="8">NAAZ PAKISTAN</text>
+    <text x="0" y="90" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#A4835A" letter-spacing="3">WOMEN'S BAGS &amp; ACCESSORIES</text>
+    <text x="0" y="150" font-family="'Cinzel', 'Playfair Display', serif" font-size="60" font-weight="700" fill="#2C221E" letter-spacing="2">Elegance in Every Detail</text>
+    <text x="0" y="200" font-family="'Inter', sans-serif" font-size="18" fill="#6E5D52">Discover premium handcrafted bags and luxury accessories with nationwide Cash on Delivery.</text>
+  </g>
+  <g transform="translate(1050, 220)" filter="url(#shadow)">
+    <path d="M 60 180 Q 150 20 240 180" fill="none" stroke="url(#bagGrad)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 60 180 Q 150 20 240 180" fill="none" stroke="url(#goldGrad)" stroke-width="4" opacity="0.6"/>
+    <rect x="0" y="150" width="300" height="240" rx="35" fill="url(#bagGrad)"/>
+    <path d="M 0 150 Q 150 280 300 150 L 300 180 Q 150 310 0 180 Z" fill="#8C6E4A"/>
+    <rect x="135" y="240" width="30" height="30" rx="6" fill="url(#goldGrad)"/>
+    <circle cx="150" cy="255" r="5" fill="#2C221E"/>
+  </g>
+</svg>

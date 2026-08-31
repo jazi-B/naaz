@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <rect width="600" height="600" fill="#F7F3EE"/>
+  <defs>
+    <linearGradient id="toteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A3B32"/>
+      <stop offset="100%" stop-color="#2D231E"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D068"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <circle cx="300" cy="300" r="220" fill="#EAE2D8" opacity="0.6"/>
+  <path d="M 230 290 L 230 150 Q 230 130 250 130 L 260 130 Q 270 130 270 150 L 270 290" fill="none" stroke="#2D231E" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 330 290 L 330 150 Q 330 130 350 130 L 360 130 Q 370 130 370 150 L 370 290" fill="none" stroke="#2D231E" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="170,250 430,250 400,450 200,450" fill="url(#toteGrad)" filter="url(#shadow)"/>
+  <circle cx="230" cy="275" r="8" fill="url(#goldGrad)"/>
+  <rect x="228" y="275" width="4" height="40" fill="url(#goldGrad)"/>
+  <circle cx="230" cy="320" r="14" fill="url(#goldGrad)"/>
+  <text x="300" y="360" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', serif" font-size="20" font-weight="700" fill="#E6D3B3" letter-spacing="8">NAAZ</text>
+  <text x="300" y="490" text-anchor="middle" font-family="'Cinzel', serif" font-size="18" font-weight="600" fill="#4A3B32" letter-spacing="4">EXECUTIVE TOTE</text>
+</svg>
