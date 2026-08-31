@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "cd backend/medusa-app && npm install --include=dev && cd apps/backend && npm install --include=dev && npx @medusajs/cli build",
-    "start": "cd backend/medusa-app/apps/backend && npx @medusajs/cli db:migrate && npx @medusajs/cli build && npx @medusajs/cli start",
+    "start": "cd backend/medusa-app/apps/backend && npx @medusajs/cli db:migrate && npx @medusajs/cli start",
     "dev": "npm --prefix storefront run dev",
     "dev:backend": "npm --prefix backend/medusa-app run dev",
     "dev:storefront": "npm --prefix storefront run dev",
