@@ -57,8 +57,8 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
               <ProductActionsWrapper
                 id={product.id}
                 region={region}
-                cartItems={cart?.items}
-                colors={variantsColors.data}
+                cartItems={cart?.items || []}
+                colors={variantsColors?.data || []}
               />
             </Suspense>
             <ProductTabs product={product} />

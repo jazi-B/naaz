@@ -30,7 +30,7 @@ export const getRegion = cache(async function (countryCode: string) {
 
     if (!regions || !Array.isArray(regions) || regions.length === 0) {
       return {
-        id: 'reg_01M19WDFQ1PQ29KMRD2KSP6D0T',
+        id: 'reg_01M1BF9Y1JT3WVCX1AFYE8CS1Z',
         name: 'Pakistan',
         currency_code: 'pkr',
         countries: [{ iso_2: 'pk' }, { iso_2: 'us' }],
@@ -44,12 +44,15 @@ export const getRegion = cache(async function (countryCode: string) {
     })
 
     const targetCode = (countryCode || 'pk').toLowerCase()
-    const region = regionMap.get(targetCode) || regions[0]
+    const region =
+      regionMap.get(targetCode) ||
+      regions.find((r) => r.currency_code === 'pkr' || r.name === 'Pakistan') ||
+      regions[0]
 
     return region
   } catch (e: any) {
     return {
-      id: 'reg_01M19WDFQ1PQ29KMRD2KSP6D0T',
+      id: 'reg_01M1BF9Y1JT3WVCX1AFYE8CS1Z',
       name: 'Pakistan',
       currency_code: 'pkr',
       countries: [{ iso_2: 'pk' }, { iso_2: 'us' }],

@@ -125,14 +125,18 @@ export const getExploreBlogData = async (): Promise<BlogData> => {
 
 // Products
 export const getProductVariantsColors = async (): Promise<VariantColorData> => {
-  const res = await fetchStrapiClient(
-    `/api/product-variants-colors?populate[1]=Type&populate[2]=Type.Image&pagination[start]=0&pagination[limit]=100`,
-    {
-      next: { tags: ['variants-colors'] },
-    }
-  )
+  try {
+    const res = await fetchStrapiClient(
+      `/api/product-variants-colors?populate[1]=Type&populate[2]=Type.Image&pagination[start]=0&pagination[limit]=100`,
+      {
+        next: { tags: ['variants-colors'] },
+      }
+    )
+    const json = await res.json()
+    if (json && Array.isArray(json.data)) return json
+  } catch (e) {}
 
-  return res.json()
+  return { data: [] } as any
 }
 
 // About Us
