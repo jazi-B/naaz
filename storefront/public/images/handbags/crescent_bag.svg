@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <rect width="600" height="600" fill="#FAF8F5"/>
+  <defs>
+    <linearGradient id="crescentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8DDD3"/>
+      <stop offset="100%" stop-color="#CBBBB0"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D068"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#4A403A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <circle cx="300" cy="300" r="220" fill="#F0EBE5" opacity="0.6"/>
+  <!-- Crescent Shoulder Strap -->
+  <path d="M 210 280 Q 300 130 390 280" fill="none" stroke="#A69588" stroke-width="16" stroke-linecap="round"/>
+  <!-- Crescent Moon Shaped Bag Body -->
+  <path d="M 180 270 Q 300 230 420 270 Q 450 390 300 420 Q 150 390 180 270 Z" fill="url(#crescentGrad)" filter="url(#shadow)"/>
+  <!-- Top Zipper Line -->
+  <path d="M 200 275 Q 300 240 400 275" fill="none" stroke="url(#goldGrad)" stroke-width="4"/>
+  <!-- Zipper Pull -->
+  <circle cx="400" cy="275" r="7" fill="url(#goldGrad)"/>
+  <rect x="398" y="275" width="4" height="20" fill="url(#goldGrad)" rx="2"/>
+  <text x="300" y="490" text-anchor="middle" font-family="'Cinzel', serif" font-size="18" font-weight="600" fill="#5A4E47" letter-spacing="4">MODERN CRESCENT</text>
+</svg>

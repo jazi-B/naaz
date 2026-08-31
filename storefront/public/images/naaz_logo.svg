@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200" width="100%" height="100%">
+  <!-- NAAZ Calligraphic Handbag Logo Icon in Luxury Gold -->
+  <defs>
+    <linearGradient id="naazGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C78A"/>
+      <stop offset="50%" stop-color="#C5A880"/>
+      <stop offset="100%" stop-color="#997746"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#4A3419" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(45, 15)" fill="none" filter="url(#goldGlow)">
+    <!-- Handbag Handle Arc above Noon -->
+    <path d="M 185 85 Q 210 25 245 25 Q 280 25 305 85" stroke="url(#naazGoldGrad)" stroke-width="13" stroke-linecap="round"/>
+
+    <!-- Main Handbag Body for 'ن' (Noon) -->
+    <path d="M 335 90 C 335 125, 325 140, 280 140 L 175 140 C 160 140, 150 130, 150 115 L 150 85 Q 150 70, 165 70 L 310 70 Q 335 70, 335 90 Z" fill="none" stroke="url(#naazGoldGrad)" stroke-width="13" stroke-linejoin="round"/>
+    
+    <!-- Noon Diamond Dot inside Bag -->
+    <polygon points="315,95 325,105 315,115 305,105" fill="url(#naazGoldGrad)"/>
+
+    <!-- 'ا' (Alif) -->
+    <path d="M 130 35 L 130 140 Q 130 160, 105 175 C 90 185, 70 185, 50 180" stroke="url(#naazGoldGrad)" stroke-width="13" stroke-linecap="round"/>
+
+    <!-- 'ز' (Zey) -->
+    <path d="M 30 75 Q 30 140, 10 165 C 0 178, -15 185, -35 188" stroke="url(#naazGoldGrad)" stroke-width="13" stroke-linecap="round" opacity="0"/>
+  </g>
+</svg>
