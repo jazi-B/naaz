@@ -13,8 +13,8 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
-    "start": "medusa build && medusa start --port $PORT",
+    "build": "NODE_OPTIONS=--max-old-space-size=850 medusa build",
+    "start": "medusa start --port $PORT",
     "dev": "medusa develop",
     "lint": "medusa lint",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
