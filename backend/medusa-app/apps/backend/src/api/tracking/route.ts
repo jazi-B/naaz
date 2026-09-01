@@ -149,7 +149,8 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
   const adminSecret = process.env.ADMIN_SECRET_KEY || process.env.JWT_SECRET;
 
   // Strict Admin Authorization Check
-  if (!authHeader || (!authHeader.includes(adminSecret || "___") && !req.user)) {
+  const isAuthorizedAdmin = (req as any).user || (req as any).auth_context || (authHeader && authHeader.includes(adminSecret || "___"));
+  if (!isAuthorizedAdmin) {
     return res.status(401).json({ error: "Unauthorized: Admin privileges required." });
   }
 
