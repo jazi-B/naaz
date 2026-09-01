@@ -4,13 +4,10 @@ WORKDIR /app
 
 # Install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm install --omit=dev
 
-# Copy source code
+# Copy source + pre-built .medusa directory
 COPY . .
-
-# Build backend + admin dashboard (2GB heap so Vite doesn't OOM)
-RUN NODE_OPTIONS=--max-old-space-size=2048 npm run build
 
 # Expose port
 EXPOSE 9000
