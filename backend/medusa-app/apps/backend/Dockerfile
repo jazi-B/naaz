@@ -9,6 +9,9 @@ RUN npm install
 # Copy source + pre-built .medusa directory
 COPY . .
 
+# Copy compiled config to project root (required by medusa start in production)
+RUN cp .medusa/server/medusa-config.js medusa-config.js
+
 # Expose port
 EXPOSE 9000
 
