@@ -7,7 +7,7 @@ let MEDUSA_BACKEND_URL =
 
 let PUBLISHABLE_KEY =
   process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY ||
-  'pk_b09539d1f972deed11ed63fabef4c597d66bf2e909207b2bbd460d730db33fea'
+  'pk_40e4b9f7ad7abd6f250951736bc5f717c400178f35f63bd3047f94711ff7cc02'
 
 export const sdk = new Medusa({
   baseUrl: MEDUSA_BACKEND_URL,
