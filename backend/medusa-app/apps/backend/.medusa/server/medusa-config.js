@@ -19,7 +19,7 @@ module.exports = (0, utils_1.defineConfig)({
         }
     },
     admin: {
-        disable: false,
+        disable: true,
         vite: () => ({
             server: {
                 allowedHosts: true,
