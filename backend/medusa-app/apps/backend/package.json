@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "build": "NODE_OPTIONS=--max-old-space-size=850 medusa build",
+    "build": "NODE_OPTIONS=--max-old-space-size=2048 medusa build",
     "start": "medusa start --port $PORT",
     "dev": "medusa develop",
     "lint": "medusa lint",
