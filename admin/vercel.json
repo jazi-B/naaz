@@ -1,6 +1,13 @@
 {
   "version": 2,
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/app",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/auth/:path*",
@@ -16,6 +23,10 @@
     },
     {
       "source": "/app/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/app",
       "destination": "/index.html"
     },
     {
