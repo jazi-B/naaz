@@ -21,7 +21,7 @@ module.exports = defineConfig({
     }
   },
   admin: {
-    disable: false,
+    disable: process.env.NODE_ENV === 'production',
     vite: () => ({
       server: {
         allowedHosts: true,
