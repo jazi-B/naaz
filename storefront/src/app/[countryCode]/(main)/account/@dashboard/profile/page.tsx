@@ -7,8 +7,8 @@ import ProfileDetails from '@modules/account/components/profile-details'
 import Divider from '@modules/common/components/divider'
 
 export const metadata: Metadata = {
-  title: 'Profile',
-  description: 'View and edit your Solace Medusa Starter profile.',
+  title: 'Profile | NAAZ (ناز)',
+  description: 'View and edit your NAAZ Pakistan customer profile.',
 }
 
 export default async function Profile() {

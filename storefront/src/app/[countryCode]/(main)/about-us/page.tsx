@@ -8,9 +8,9 @@ import { NumericalSection } from '@modules/content/components/numerical-section'
 import { ExploreBlog } from '@modules/home/components/explore-blog'
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About Us | NAAZ (ناز) Luxury Handbags Pakistan',
   description:
-    'At Solace, we deliver innovative products designed to meet your needs with quality and care.',
+    'Discover the story of NAAZ — delivering premium luxury women’s handbags, clutches & tote bags across Pakistan with 100% Cash on Delivery.',
 }
 
 export default async function AboutUsPage() {

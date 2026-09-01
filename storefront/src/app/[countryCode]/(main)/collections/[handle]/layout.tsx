@@ -30,8 +30,8 @@ export async function generateMetadata(
   }
 
   const metadata = {
-    title: `${collection.title} | Solace Medusa Starter`,
-    description: `${collection.title} collection`,
+    title: `${collection.title} | NAAZ Luxury Handbags (ناز)`,
+    description: `${collection.title} collection — NAAZ Women's Handbags Pakistan`,
   } as Metadata
 
   return metadata

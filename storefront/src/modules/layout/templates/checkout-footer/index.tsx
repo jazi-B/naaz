@@ -35,8 +35,8 @@ export default function CheckoutFooter() {
         </Box>
         <Box className="flex flex-col-reverse gap-6 medium:flex-row medium:items-end medium:justify-between">
           <Box className="flex flex-wrap gap-6 gap-y-1">
-            <Text size="md" className="shrink-0 text-secondary">
-              © {new Date().getFullYear()} Solace. All rights reserved.
+            <Text className="text-secondary" size="md">
+              © {new Date().getFullYear()} NAAZ (ناز) Pakistan. All rights reserved.
             </Text>
             {checkoutFooterNavigation.map((link, id) => (
               <NavigationItem
